@@ -54,8 +54,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">Evaluating a Diffusion-based Instrumental Music Synthesizer Adapted to Human Voice Conversion</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
+            <!-- <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=2fTnAp8AAAAJ&hl=en&oi=ao" target="_blank">Ben Maman</a><sup>1</sup>,</span>
 
@@ -74,7 +73,7 @@
                   <span class="author-block">
                     <a href="https://www.audiolabs-erlangen.de/fau/professor/mueller" target="_blank">Meinard Müller</a><sup>1</sup>,</span>
 
-                  </div>
+                  </div> -->
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>International Audio Laboratories Erlangen, Germany<br><sup>2</sup>Fraunhofer IIS, Erlangen, Germany<br>
@@ -108,7 +107,7 @@
                     </span> -->
 
                     <span class="link-block">
-                      <a href="static/pdfs/Multi_Aspect_Conditioning.pdf" target="_blank"
+                      <a href="static/pdfs/voice_conversion.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -165,10 +164,10 @@ However, real-world audio often comprises multiple domains---for instance, music
   <section class="section">
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_alignment_condition">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    We provide samples converted with different styles and singer or band IDs.
+    <!-- We provide samples converted with different styles and singer or band IDs.
     <br>
-    All generated samples in this page were generated with the same T5 model from the paper, and vocoded with BigVGAN.
-    <br><br>
+    All generated samples in this page were generated with the same T5 model from the paper, and vocoded with BigVGAN. -->
+    <!-- <br><br> -->
     <!-- Song: <b>With a Little Help from My Friends (Beatles)</b>
     <br>
     <small><small>
@@ -210,7 +209,7 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Speaker: <b><span style="color:SeaGreen">Female 1</span></b>
+          <br>Speaker: <b>Female 1</b>
           <br><br>
           <audio controls>
             <source src="static/samples/speech/s1t2.mp3", type="audio/mp3">
@@ -240,7 +239,7 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-          <br>Speaker: <b><span style="color:DarkBlue">Female 2</span></b>
+          <br>Speaker: <b>Female 2</b>
           <br><br>
           <audio controls>
             <source src="static/samples/speech/s1t4.mp3", type="audio/mp3">
@@ -268,7 +267,7 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-          <br>Speaker: <b><span style="color:DarkMagenta">Male 1</span></b>
+          <br>Speaker: <b>Male 1</b>
           <!-- <br>Version: <b>Are You Experienced (Jimi Hendrix)</b> -->
           <br><br>
           <audio controls>
@@ -298,7 +297,7 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-            <br>Speaker: <b><span style="color:Maroon">Male 2</span></b>
+            <br>Speaker: <b>Male 2</b>
           <br><br>
           <audio controls>
             <source src="static/samples/speech/s1t5.mp3", type="audio/mp3">
@@ -329,39 +328,102 @@ However, real-world audio often comprises multiple domains---for instance, music
 
   </div>
 
+
+
+
   <section class="section">
   <div class="container is-widescreen">
-    <h2 class="title is-3" id="section_alignment_condition">Singing Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    We provide samples converted with different styles and singer or band IDs.
+    <h2 class="title is-3" id="section_alignment_condition">Singing Voice Conversion Samples&mdash;Popular Music & Schubert Winterreise<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    The samples in this section are conditioned on well-known singers of popular music and from the Schubert Winterreise dataset.
     <br>
-    All generated samples in this page were generated with the same T5 model from the paper, and vocoded with BigVGAN.
-    <br><br>
+    Data was obtained using vocal source separation software.
+    <!-- <br><br> -->
 
     <div class="columns is-centered">
 
+
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Singer: <b>Jim Morrison</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/singing/pop_s5_t1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s1_t1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s4_t1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s3_t1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s2_t1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          </small></small>
+      </div>
+
+
+
       <div class="column">
           <small><small>
-          <br>Singer: <b><span style="color:DarkMagenta">Male 1</span></b>
+            <br>Singer: <b>Dietrich Fischer-Dieskau</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/singing/pop_s5_t2.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s1_t2.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s4_t2.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s3_t2.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/pop_s2_t2.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          </small></small>
+
+      </div>
+
+      <div class="column">
+          <small><small>
+          <br>Singer: <b>Madonna</b>
           <!-- <br>Version: <b>Are You Experienced (Jimi Hendrix)</b> -->
           <br><br>
           <audio controls>
-            <source src="static/samples/singing/sing_s2t3.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s5_t3.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s1t3.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s1_t3.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s4t1.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s4_t3.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s3t1.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s3_t3.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s5t3.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s2_t3.mp3", type="audio/mp3">
           </audio><br><br>
 
           </small></small>
@@ -372,54 +434,69 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Singer: <b><span style="color:SeaGreen">Female 1</span></b>
+          <br>Singer: <b>Matti Caspi</b>
           <br><br>
           <audio controls>
-            <source src="static/samples/singing/sing_s2t1.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s5_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s1t1.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s1_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s4t2.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s4_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s3t2.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s3_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s5t1.mp3", type="audio/mp3">
+            <source src="static/samples/singing/pop_s2_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           </small></small>
       </div>
 
+
+    </div>
+
+  </div>
+
+  <section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="section_alignment_condition">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    The samples in this section are conditioned singers from the Singstyle111 dataset, in which singers were recorded in isolation.
+    <!-- <br><br> -->
+
+    <div class="columns is-centered">
+
+
+
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Singer: <b><span style="color:SeaGreen">Female 1</span></b>
+          <br>Singer: <b>Female 1</b>
           <br><br>
           <audio controls>
-            <source src="static/samples/singing/sing_s2t2.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s2_tf1.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s1t2.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s4_tf1.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s4t3.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s6_tf1.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s3t3.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s5_tf1.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s5t2.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s7_tf1.mp3", type="audio/mp3">
           </audio><br><br>
 
           </small></small>
@@ -433,23 +510,23 @@ However, real-world audio often comprises multiple domains---for instance, music
           <br>Singer: <b><span style="color:DarkBlue">Female 2</span></b>
           <br><br>
           <audio controls>
-            <source src="static/samples/singing/sing_s2t4.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s2_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s1t4.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s1_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s3t4.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s3_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s4t4.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s4_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s5t4.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s5_t4.mp3", type="audio/mp3">
           </audio><br><br>
 
           </small></small>
@@ -461,324 +538,95 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-            <br>Singer: <b><span style="color:Maroon">Male 2</span></b>
+            <br>Singer: <b>Female 4</b>
           <br><br>
           <audio controls>
-            <source src="static/samples/singing/sing_s2t5.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s2_tf4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s1t5.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s4_tf4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s4t4.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s6_tf4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s3t4.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s5_tf4.mp3", type="audio/mp3">
           </audio><br><br>
 
           <audio controls>
-            <source src="static/samples/singing/sing_s5t5.mp3", type="audio/mp3">
+            <source src="static/samples/singing/sing_s7_tf4.mp3", type="audio/mp3">
           </audio><br><br>
 
           </small></small>
 
-      </div>
-
-
-    </div>
-
-
-    Song: <b>Lookin' Out My Back Door (Creedence)</b>
-    <br>
-    <small><small>
-    Original:<br>
-    </small></small>
-    <audio id="lookin" controls>
-    <source src="static/samples/gt/lookin_out_my_back_door.flac", type="audio/flac">
-    </audio>
-    <div class="columns is-centered">
-
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b><span style="color:Maroon">The Doors (The Doors)</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_orchestral_suite4_overture_bach_orchestral_suite3_MIDI" controls>
-          <source src="static/samples/mixture/lookin_out_my_back_door_doors.flac", type="audio/flac">
-          </audio>
-          <script>
-          var audio = document.getElementById("bach_orchestral_suite4_overture_bach_orchestral_suite3_MIDI");
-          audio.volume = 0.5;
-          </script>
-          <br>Ours (Vocal):<br>
-          <audio controls>
-          <source src="static/samples/vocal_only/lookin_out_my_back_door_doors.flac", type="audio/flac">
-          </audio>
-          </small></small>
       </div>
 
       <div class="column">
           <small><small>
-          <br>Version: <b><span style="color:SeaGreen">Fischer Dieskau Moore (Winterreise)</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <source src="static/samples/mixture/lookin_out_my_back_door_FischerDieskau_Moore.flac", type="audio/flac">
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal): (Fischer Dieskau Demus)<br>
+          <br>Singer: <b>Male 1</b>
+          <!-- <br>Version: <b>Are You Experienced (Jimi Hendrix)</b> -->
+          <br><br>
           <audio controls>
-          <source src="static/samples/vocal_only/lookin_out_my_back_door_FischerDieskau_Demus.flac", type="audio/flac">
-          </audio>
+            <source src="static/samples/singing/sing_s2_tm1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/sing_s4_tm1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/sing_s6_tm1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/sing_s5_tm1.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/sing_s7_tm1.mp3", type="audio/mp3">
+          </audio><br><br>
+
           </small></small>
 
       </div>
+
 
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Version: <b><span style="color:MidnightBlue">Matti Caspi</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="brahms_concerto_beethoven_concertos_MIDI" controls>
-          <source src="static/samples/mixture/lookin_out_my_back_door_matti_caspi.flac", type="audio/flac">
-          </audio>
-          <script>
-          var audio = document.getElementById("brahms_concerto_beethoven_concertos_MIDI");
-          audio.volume = 0.5;
-          </script>
-          <br>Ours (Vocal):<br>
+          <br>Singer: <b>Male 4</b>
+          <br><br>
           <audio controls>
-          <source src="static/samples/vocal_only/lookin_out_my_back_door_matti_caspi.flac", type="audio/flac">
-          </audio>
-          </small></small>
-      </div>
+            <source src="static/samples/singing/sing_s2_tm4.mp3", type="audio/mp3">
+          </audio><br><br>
 
-      <div class="column">
-          <small><small>
-          <br>Version: <b>Green River (Creedence)</b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <source src="static/samples/mixture/lookin_out_my_back_door_green_river.flac", type="audio/flac">
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal):<br>
           <audio controls>
-          <source src="static/samples/vocal_only/lookin_out_my_back_door_green_river.flac", type="audio/flac">
-          </audio>
-          </small></small>
+            <source src="static/samples/singing/sing_s4_tm4.mp3", type="audio/mp3">
+          </audio><br><br>
 
+          <audio controls>
+            <source src="static/samples/singing/sing_s6_tm4.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/sing_s5_tm4.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/sing_s7_tm4.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          </small></small>
       </div>
 
 
     </div>
 
-    <br>
+  </div>
 
-
-
-    <br>
-
-    Song: <b>Like a Virgin (Madonna)</b>
-    <br>
-    <small><small>
-    Original:<br>
-    </small></small>
-    <audio id="lookin" controls>
-    <source src="static/samples/gt/like_a_virgin.flac", type="audio/flac">
-    </audio>
-    <div class="columns is-centered">
-      <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
-          <small><small>
-          <br>Version: <b><span style="color:Indigo">Master of Puppets (Metallica)</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="brahms_concerto_beethoven_concertos_MIDI" controls>
-          <source src="static/samples/mixture/like_a_virgin_master_of_puppets.flac", type="audio/flac">
-          </audio>
-          <script>
-          var audio = document.getElementById("brahms_concerto_beethoven_concertos_MIDI");
-          audio.volume = 0.5;
-          </script>
-          <br>Ours (Vocal):<br>
-          <audio controls>
-            <source src="static/samples/vocal_only/like_a_virgin_master_of_puppets.flac", type="audio/flac">
-          </audio>
-          </small></small>
-      </div>
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b>Appetite for Destruction (GNR)</b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_orchestral_suite4_overture_bach_orchestral_suite3_MIDI" controls>
-          <source src="static/samples/mixture/like_a_virgin_appetite_for_destruction.flac", type="audio/flac">
-          </audio>
-          <script>
-          var audio = document.getElementById("bach_orchestral_suite4_overture_bach_orchestral_suite3_MIDI");
-          audio.volume = 0.5;
-          </script>
-          <br>Ours (Vocal):<br>
-          <audio controls>
-            <source src="static/samples/vocal_only/like_a_virgin_appetite_for_destruction.flac", type="audio/flac">
-          </audio>
-          </small></small>
-      </div>
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b><span style="color:SeaGreen">Fischer Dieskau Moore (Winterreise)</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <source src="static/samples/mixture/like_a_virgin_FischerDieskau_Moore.flac", type="audio/flac">
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal):<br>
-          <audio controls>
-            <source src="static/samples/vocal_only/like_a_virgin_FischerDieskau_Moore.flac", type="audio/flac">
-          </audio>
-          </small></small>
-
-      </div>
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b>Like a Prayer (Madonna)</b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <!-- <source src="static/samples/mixture/like_a_virgin_a_night_at_the_opera.flac", type="audio/flac"> -->
-          <source src="static/samples/mixture/like_a_virgin_like_a_prayer.flac", type="audio/flac">
-
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal):<br>
-          <audio controls>
-          <!-- <source src="static/samples/vocal_only/like_a_virgin_a_night_at_the_opera.flac", type="audio/flac"> -->
-          <source src="static/samples/vocal_only/like_a_virgin_like_a_prayer.flac", type="audio/flac">
-
-          </audio>
-          </small></small>
-
-      </div>
-
-
-    </div>
-    <br>
-
-    Song: <b>Derech Hameshi (Yehudit Ravitz)</b>
-    <br>
-    <small><small>
-    Original:<br>
-    </small></small>
-    <audio id="lookin" controls>
-    <source src="static/samples/gt/derech_hameshi.flac", type="audio/flac">
-    </audio>
-    <div class="columns is-centered">
-
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b><span style="color:MidnightBlue">Matti Caspi</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <source src="static/samples/mixture/derech_hameshi_matti_caspi.flac", type="audio/flac">
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal):<br>
-          <audio controls>
-          <source src="static/samples/vocal_only/derech_hameshi_matti_caspi.flac", type="audio/flac">
-          </audio>
-          </small></small>
-
-      </div>
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b><span style="color:Indigo">Master of Puppets (Metallica)</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <source src="static/samples/mixture/derech_hameshi_master_of_puppets.flac", type="audio/flac">
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal):<br>
-          <audio controls>
-            <source src="static/samples/vocal_only/derech_hameshi_master_of_puppets.flac", type="audio/flac">
-          </audio>
-          </small></small>
-
-      </div>
-
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b><span style="color:DarkMagenta">Abbey Road (Beatles)</span></b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <source src="static/samples/mixture/derech_hameshi_abbey_road.flac", type="audio/flac">
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal):<br>
-          <audio controls>
-            <source src="static/samples/vocal_only/derech_hameshi_abbey_road.flac", type="audio/flac">
-          </audio>
-          </small></small>
-
-      </div>
-
-
-      <div class="column">
-          <small><small>
-          <br>Version: <b>Yehudit Ravitz</b>
-          <br>
-          Ours (Vocal + Intrumental):<br>
-          <audio id="bach_harpsichord_concerto_bach_violin_sonatas_MIDI" controls>
-          <source src="static/samples/mixture/derech_hameshi_yehudit_ravitz.flac", type="audio/flac">
-          </audio>
-          <!-- <script>
-          var audio = document.getElementById("bach_harpsichord_concerto_bach_violin_sonatas_MIDI");
-          audio.volume = 0.5;
-          </script> -->
-          <br>Ours (Vocal):<br>
-          <audio controls>
-          <source src="static/samples/vocal_only/derech_hameshi_yehudit_ravitz.flac", type="audio/flac">
-          </audio>
-          </small></small>
-
-      </div>
-    </div>
 
     <script>
     function myFunction_alignment() {
@@ -810,176 +658,13 @@ However, real-world audio often comprises multiple domains---for instance, music
     </div> -->
 <!-- end button env -->
 
-    <br><br>
 
 
 
-  <h2 class="title is-3" id="section_pitch_only">Speech Synthesis and Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-  <p>
-  We show samples for speech synthesis and voice conversion from the exact same model above. In these samples, we provide a phoneme condition alone, and do not provide an f0 condition, i.e., we rely on the model to generate an f0 curve.
-  </p>
-  <br>
-  <small><small>
-  <div class="columns is-centered">
-    <div class="column">
-        Version: <b>Tim (IIS_OMONDI_MALE)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/C_618_IIS_OMONDI_MALE.flac", type="audio/flac">
-        </audio>
-    </div>
-
-    <div class="column">
-        Version: <b>92 (Hi-Fi_TTS)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/C_618_Hi-Fi_TTS.flac", type="audio/flac">
-        </audio>
-    </div>
 
 
-    <div class="column">
-        Version: <b>Ian (TC-STAR-UK)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/C_618_TC-STAR-UK.flac", type="audio/flac">
-        </audio>
-    </div>
-
-    <div class="column">
-        Version: <b>Chantal (IIS_OMONDI_FEMALE)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/C_618_IIS_OMONDI_FEMALE.flac", type="audio/flac">
-        </audio>
-    </div>
 
 
-  </div>
-
-  <br>
-
-  </small></small>
-
-  <small><small>
-  <div class="columns is-centered">
-    <div class="column">
-        Version: <b>Tim (IIS_OMONDI_MALE)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/T_0015_IIS_OMONDI_MALE.flac", type="audio/flac">
-        </audio>
-    </div>
-
-    <div class="column">
-        Version: <b>92 (Hi-Fi_TTS)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/T_0015_Hi-Fi_TTS.flac", type="audio/flac">
-        </audio>
-    </div>
-
-
-    <div class="column">
-        Version: <b>Ian (TC-STAR-UK)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/T_0015_TC-STAR-UK.flac", type="audio/flac">
-        </audio>
-    </div>
-
-    <div class="column">
-        Version: <b>Chantal (IIS_OMONDI_FEMALE)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/T_0015_IIS_OMONDI_FEMALE.flac", type="audio/flac">
-        </audio>
-    </div>
-
-
-  </div>
-
-  <br>
-
-  </small></small>
-
-  <small><small>
-    <div class="columns is-centered">
-      <div class="column">
-          Version: <b>Tim (IIS_OMONDI_MALE)</b><br>
-          <br>
-          <audio controls>
-          <source src="static/samples/speech/E_138_IIS_OMONDI_MALE.flac", type="audio/flac">
-          </audio>
-      </div>
-
-      <div class="column">
-          Version: <b>92 (Hi-Fi_TTS)</b><br>
-          <br>
-          <audio controls>
-          <source src="static/samples/speech/E_138_Hi-Fi_TTS.flac", type="audio/flac">
-          </audio>
-      </div>
-
-
-      <div class="column">
-          Version: <b>Ian (TC-STAR-UK)</b><br>
-          <br>
-          <audio controls>
-          <source src="static/samples/speech/E_138_TC-STAR-UK.flac", type="audio/flac">
-          </audio>
-      </div>
-
-      <div class="column">
-          Version: <b>Chantal (IIS_OMONDI_FEMALE)</b><br>
-          <br>
-          <audio controls>
-          <source src="static/samples/speech/E_138_IIS_OMONDI_FEMALE.flac", type="audio/flac">
-          </audio>
-      </div>
-
-
-    </div>
-  <br>
-  </small></small>
-
-  <small><small>
-  <div class="columns is-centered">
-    <div class="column">
-        Version: <b>Tim (IIS_OMONDI_MALE)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/E_596_IIS_OMONDI_MALE.flac", type="audio/flac">
-        </audio>
-    </div>
-
-    <div class="column">
-        Version: <b>92 (Hi-Fi_TTS)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/E_596_Hi-Fi_TTS.flac", type="audio/flac">
-        </audio>
-    </div>
-
-
-    <div class="column">
-        Version: <b>Ian (TC-STAR-UK)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/E_596_TC-STAR-UK.flac", type="audio/flac">
-        </audio>
-    </div>
-
-    <div class="column">
-        Version: <b>Chantal (IIS_OMONDI_FEMALE)</b><br>
-        <br>
-        <audio controls>
-        <source src="static/samples/speech/E_596_IIS_OMONDI_FEMALE.flac", type="audio/flac">
-        </audio>
-    </div>
-
-
-  </div>
 
   <br>
 
@@ -998,123 +683,9 @@ However, real-world audio often comprises multiple domains---for instance, music
   }
   </script>
 
-  <!-- button env -->
-  <!-- <center>
-  <button onclick="myFunction_pitch()" style="height:56px;width:175px;
-                                        border-radius: 8px;
-                                        font-size:140%;
-                                        color: white;
-                                        /* padding: 15px 32px; */
-                                        margin: 2px 2px;
-                                        background-color:#4CAF50; /* Green */
-                                        border: none;
-                                        cursor: pointer;">
-  More
-  </button>
-  </center>
-  <div id="buttonDiv_pitch" style="display:none">
-  </div> -->
-  <!-- end button env -->
-  <h2 class="title is-3" id="section_transcription_condition">Instrumental Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-  We show here instrumental music samples generated from MIDI by the exact same model above.
-  <br>
-
-  <br><br>
-  <div class="columns is-centered">
-
-    <div class="column">
-      <small><small>MIDI: <b>Brahms 1st Piano Concerto</b>
-      <br>Version: <b>Beethoven Piano Concertos</b>
-        <br><br>
-        <audio controls>
-          <source src="static/samples/instrumental/brahms_concerto_1_beethoven_concertos.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
-
-    <div class="column">
-      <small><small>MIDI: <b>Bach Badineri</b>
-      <br>Version: <b>Cambini's Wind Quintet</b>
-        <br><br>
-        <audio controls>
-        <source src="static/samples/instrumental/badineri_cambini.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
 
 
 
-    <div class="column">
-      <small><small>MIDI: <b>Bach Cantata BWV29</b>
-      <br>Version: <b>Bach 3rd Orchestral Suite</b>
-        <br><br>
-        <audio controls>
-        <source src="static/samples/instrumental/bwv29_orchestral_suite_3.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
-
-    <div class="column">
-      <small><small>MIDI: <b>Bach 3rd English Suite</b>
-      <br>Version: <b>Bach WTC II</b>
-        <br><br>
-        <audio controls>
-          <source src="static/samples/instrumental/bwv808_wtc2.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
-
-
-
-
-  </div>
-
-  <br>
-
-  <div class="columns is-centered">
-    <div class="column">
-      <small><small>MIDI: <b>Paganini Capriccio</b>
-      <br>Version: <b>Bach Violin Sonata BWV1004</b>
-        <br><br>
-        <audio controls>
-          <source src="static/samples/instrumental/paganini_bwv1004.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
-
-    <div class="column">
-      <small><small>MIDI: <b>Felicidade</b>
-      <br>Version: <b>John Williams: Albeniz Sevilla</span></b>
-        <br><br>
-        <audio controls>
-          <source src="static/samples/instrumental/felicidade_john_williams_albeniz.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
-
-    <div class="column">
-      <small><small>MIDI: <b>Felicidade</b>
-      <br>Version: <b>John Williams: Sor Mozart Variations</b>
-        <br><br>
-        <audio controls>
-          <source src="static/samples/instrumental/felicidade_john_williams_mozart.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
-
-
-
-    <div class="column">
-      <small><small>MIDI: <b>Brahms 5th Hungarian Dance</b>
-      <br>Version: <b>Trio Élégiaque: Beethoven Piano Trios</span></b>
-        <br><br>
-        <audio controls>
-          <source src="static/samples/instrumental/hungarian_dance_5_beethoven_piano_trios.flac", type="audio/flac">
-        </audio>
-        </small></small>
-    </div>
-  </div>
-  <br>
 
   <script>
   function myFunction_transcription() {
@@ -1172,7 +743,7 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column is-8">
         <div class="content">
           <p>
-            © Ben Maman, Christian Dittmar, and Meinard Müller (International Audio Laboratories Erlangen, Germany) 2024.
+            © Ben Maman and Meinard Müller (International Audio Laboratories Erlangen, Germany) 2025.
 
             This project is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. This means you can share and adapt under the following conditions:
 <br>
