@@ -53,8 +53,8 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Evaluating a Diffusion-based Instrumental Music Synthesizer Adapted to Human Voice Conversion</h1>
-            <!-- <div class="is-size-5 publication-authors">
+            <h1 class="title is-1 publication-title">Adapting a Diffusion-based Instrumental Music Synthesizer to Human Voice Conversion</h1>
+            <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=2fTnAp8AAAAJ&hl=en&oi=ao" target="_blank">Ben Maman</a><sup>1</sup>,</span>
 
@@ -62,7 +62,7 @@
                   <a href="https://www.audiolabs-erlangen.de/fau/assistant/zalkow" target="_blank">Frank Zalkow</a><sup>2</sup>,</span>
 
                   <span class="author-block">
-                    <a href="https://www.audiolabs-erlangen.de/fau/assistant/berendes" target="_blank">Hans Ulrich Berendes</a><sup>1</sup>,</span>
+                    <a href="https://www.audiolabs-erlangen.de/fau/assistant/berendes" target="_blank">Hans-Ulrich Berendes</a><sup>1</sup>,</span>
 
                     <span class="author-block">
                       <a href="https://scholar.google.com/citations?user=bVntPxoAAAAJ&hl=it" target="_blank">Paolo Sani</a><sup>2</sup>,</span>
@@ -73,7 +73,7 @@
                   <span class="author-block">
                     <a href="https://www.audiolabs-erlangen.de/fau/professor/mueller" target="_blank">Meinard Müller</a><sup>1</sup>,</span>
 
-                  </div> -->
+                  </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>International Audio Laboratories Erlangen, Germany<br><sup>2</sup>Fraunhofer IIS, Erlangen, Germany<br>
@@ -163,7 +163,19 @@ However, real-world audio often comprises multiple domains---for instance, music
 
   <section class="section">
   <div class="container is-widescreen">
-    <h2 class="title is-3" id="section_alignment_condition">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <h2 class="title is-3" id="contents">Contents</h2>
+
+      <ul style="list-style-type:disc;padding-left:40px">
+      <li><a href="#section_speech">Speech Voice Conversion Samples</a></li>
+      <li><a href="#section_singing_pop_winter">Singing Voice Conversion Samples—Popular Music & Schubert Winterreise</a></li>
+      <li><a href="#section_singing_singstyle111">Singing Voice Conversion Samples—Singstyle111 Dataset</a></li>
+      <li><a href="#section_speech_mushra">Speech MUSHRA-like Listening Test</a></li>
+      <li><a href="#section_singing_mushra">Singing MUSHRA-like Listening Test</a></li>
+      <li><a href="#section_singing_similarity">Singer Similarity Listening Test</a></li>
+    </ul>
+    <br>
+
+    <h2 class="title is-3" id="section_speech">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     <!-- We provide samples converted with different styles and singer or band IDs.
     <br>
     All generated samples in this page were generated with the same T5 model from the paper, and vocoded with BigVGAN. -->
@@ -209,8 +221,11 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Speaker: <b>Female 1</b>
-          <br><br>
+          <br><b>Reference (Female 1):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/speech_F1_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/speech/s1t2.mp3", type="audio/mp3">
           </audio><br><br>
@@ -239,8 +254,11 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-          <br>Speaker: <b>Female 2</b>
-          <br><br>
+          <br><b>Reference (Female 2):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/speech_F2_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/speech/s1t4.mp3", type="audio/mp3">
           </audio><br><br>
@@ -267,9 +285,11 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-          <br>Speaker: <b>Male 1</b>
-          <!-- <br>Version: <b>Are You Experienced (Jimi Hendrix)</b> -->
-          <br><br>
+          <br><b>Reference (Male 1):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/speech_M1_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/speech/s1t3.mp3", type="audio/mp3">
           </audio><br><br>
@@ -297,8 +317,11 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-            <br>Speaker: <b>Male 2</b>
-          <br><br>
+            <br><b>Reference (Male 2):</b><br>
+            <audio controls>
+              <source src="static/samples/reference/speech_M2_ref.mp3", type="audio/mp3">
+            </audio><br><br>
+            <b>Generated:</b>
           <audio controls>
             <source src="static/samples/speech/s1t5.mp3", type="audio/mp3">
           </audio><br><br>
@@ -333,7 +356,7 @@ However, real-world audio often comprises multiple domains---for instance, music
 
   <section class="section">
   <div class="container is-widescreen">
-    <h2 class="title is-3" id="section_alignment_condition">Singing Voice Conversion Samples&mdash;Popular Music & Schubert Winterreise<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <h2 class="title is-3" id="section_singing_pop_winter">Singing Voice Conversion Samples&mdash;Popular Music & Schubert Winterreise<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     The samples in this section are conditioned on well-known singers of popular music and from the Schubert Winterreise dataset.
     <br>
     Data was obtained using vocal source separation software.
@@ -346,8 +369,11 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Singer: <b>Jim Morrison</b>
-          <br><br>
+            <br><b>Reference (Jim Morrison):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/doors_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/pop_s5_t1.mp3", type="audio/mp3">
           </audio><br><br>
@@ -375,8 +401,11 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-            <br>Singer: <b>Dietrich Fischer-Dieskau</b>
-          <br><br>
+            <br><b>Reference (Dietrich Fischer-Dieskau):</b><br>
+            <audio controls>
+              <source src="static/samples/reference/fischer_dieskau_ref.mp3", type="audio/mp3">
+            </audio><br><br>
+            <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/pop_s5_t2.mp3", type="audio/mp3">
           </audio><br><br>
@@ -403,9 +432,11 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-          <br>Singer: <b>Madonna</b>
-          <!-- <br>Version: <b>Are You Experienced (Jimi Hendrix)</b> -->
-          <br><br>
+            <br><b>Reference (Madonna):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/madonna_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/pop_s5_t3.mp3", type="audio/mp3">
           </audio><br><br>
@@ -434,8 +465,11 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Singer: <b>Matti Caspi</b>
-          <br><br>
+            <br><b>Reference (Matti Caspi):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/matti_caspi_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/pop_s5_t4.mp3", type="audio/mp3">
           </audio><br><br>
@@ -466,8 +500,8 @@ However, real-world audio often comprises multiple domains---for instance, music
 
   <section class="section">
   <div class="container is-widescreen">
-    <h2 class="title is-3" id="section_alignment_condition">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    The samples in this section are conditioned singers from the Singstyle111 dataset, in which singers were recorded in isolation.
+    <h2 class="title is-3" id="section_singing_singstyle111">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    The samples in this section are conditioned on singers from the Singstyle111 dataset, in which singers were recorded in isolation.
     <!-- <br><br> -->
 
     <div class="columns is-centered">
@@ -477,8 +511,11 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Singer: <b>Female 1</b>
-          <br><br>
+            <br><b>Reference (Female 1):</b><br>
+            <audio controls>
+              <source src="static/samples/reference/singing_F1_ref.mp3", type="audio/mp3">
+            </audio><br><br>
+            <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/sing_s2_tf1.mp3", type="audio/mp3">
           </audio><br><br>
@@ -491,9 +528,9 @@ However, real-world audio often comprises multiple domains---for instance, music
             <source src="static/samples/singing/sing_s6_tf1.mp3", type="audio/mp3">
           </audio><br><br>
 
-          <audio controls>
+          <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tf1.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br><br> -->
 
           <audio controls>
             <source src="static/samples/singing/sing_s7_tf1.mp3", type="audio/mp3">
@@ -505,41 +542,18 @@ However, real-world audio often comprises multiple domains---for instance, music
 
 
 
-      <!-- <div class="column">
-          <small><small>
-          <br>Singer: <b><span style="color:DarkBlue">Female 2</span></b>
-          <br><br>
-          <audio controls>
-            <source src="static/samples/singing/sing_s2_t4.mp3", type="audio/mp3">
-          </audio><br><br>
 
-          <audio controls>
-            <source src="static/samples/singing/sing_s1_t4.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          <audio controls>
-            <source src="static/samples/singing/sing_s3_t4.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          <audio controls>
-            <source src="static/samples/singing/sing_s4_t4.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          <audio controls>
-            <source src="static/samples/singing/sing_s5_t4.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-
-      </div> -->
 
 
 
 
       <div class="column">
           <small><small>
-            <br>Singer: <b>Female 4</b>
-          <br><br>
+            <br><b>Reference (Female 4):</b><br>
+            <audio controls>
+              <source src="static/samples/reference/singing_F4_ref.mp3", type="audio/mp3">
+            </audio><br><br>
+            <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/sing_s2_tf4.mp3", type="audio/mp3">
           </audio><br><br>
@@ -552,9 +566,9 @@ However, real-world audio often comprises multiple domains---for instance, music
             <source src="static/samples/singing/sing_s6_tf4.mp3", type="audio/mp3">
           </audio><br><br>
 
-          <audio controls>
+          <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tf4.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br><br> -->
 
           <audio controls>
             <source src="static/samples/singing/sing_s7_tf4.mp3", type="audio/mp3">
@@ -566,9 +580,11 @@ However, real-world audio often comprises multiple domains---for instance, music
 
       <div class="column">
           <small><small>
-          <br>Singer: <b>Male 1</b>
-          <!-- <br>Version: <b>Are You Experienced (Jimi Hendrix)</b> -->
-          <br><br>
+          <br><b>Reference (Male 1):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/singing_M1_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/sing_s2_tm1.mp3", type="audio/mp3">
           </audio><br><br>
@@ -581,9 +597,9 @@ However, real-world audio often comprises multiple domains---for instance, music
             <source src="static/samples/singing/sing_s6_tm1.mp3", type="audio/mp3">
           </audio><br><br>
 
-          <audio controls>
+          <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tm1.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br><br> -->
 
           <audio controls>
             <source src="static/samples/singing/sing_s7_tm1.mp3", type="audio/mp3">
@@ -597,8 +613,11 @@ However, real-world audio often comprises multiple domains---for instance, music
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-          <br>Singer: <b>Male 4</b>
-          <br><br>
+          <br><b>Reference (Male 4):</b><br>
+          <audio controls>
+            <source src="static/samples/reference/singing_M4_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated:</b>
           <audio controls>
             <source src="static/samples/singing/sing_s2_tm4.mp3", type="audio/mp3">
           </audio><br><br>
@@ -611,9 +630,9 @@ However, real-world audio often comprises multiple domains---for instance, music
             <source src="static/samples/singing/sing_s6_tm4.mp3", type="audio/mp3">
           </audio><br><br>
 
-          <audio controls>
+          <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tm4.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br><br> -->
 
           <audio controls>
             <source src="static/samples/singing/sing_s7_tm4.mp3", type="audio/mp3">
@@ -624,6 +643,638 @@ However, real-world audio often comprises multiple domains---for instance, music
 
 
     </div>
+
+  </div>
+
+  <section class="section">
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="section_speech_mushra">Speech MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <!-- <br><br> -->
+
+    <div class="columns is-centered">
+
+
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>PAD-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s1_padvc.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s2_padvc.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s0_padvc.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>MAT-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s1_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s2_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s0_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>T5-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s1_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s2_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s0_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>T5-All</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s1_t5mix.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s2_t5mix.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/speech/listening_test/lt_s0_t5mix.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+    <div class="container is-widescreen">
+      <h2 class="title is-3" id="section_singing_mushra">Singing MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+
+
+    <div class="columns is-centered">
+
+
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>PAD-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s2_padvc.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s1_padvc.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s0_padvc.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>MAT-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s2_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s1_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s0_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>T5-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s2_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s1_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s0_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <small><small>
+          <br>Model: <b>T5-All</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s2_t5mix.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s1_t5mix.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/singing/listening_test/slt_s0_t5mix.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+<br><br>
+    <div class="container is-widescreen">
+      <h2 class="title is-3" id="section_singing_similarity">Singer Similarity Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+
+
+    In this listening test, we render the same source with a target singer, and another randomly sampled singer. We ask the listener to rate similarity to the target singer. We compare the two models T5-Voc and MAC-Voc, yielding together four samples.
+
+    <small><small>
+
+    <br>
+
+
+    <!-- Reference:
+    <br>
+    <audio controls>
+      <source src="static/samples/similarity/sim_lt_s1_ref1.mp3", type="audio/mp3">
+    </audio>
+
+    <div class="columns is-centered">
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>T5-Voc Other</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_t5_other.mp3", type="audio/mp3">
+          </audio>
+      </div>
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>MAC-Voc Other</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_padvccfm_other.mp3", type="audio/mp3">
+          </audio>
+      </div>
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>MAC-Voc</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_padvccfm.mp3", type="audio/mp3">
+          </audio>
+      </div>
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>T5-Voc</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_t5.mp3", type="audio/mp3">
+          </audio>
+      </div>
+    </div> -->
+
+    Reference:
+    <br>
+    <audio controls>
+      <source src="static/samples/similarity/sim_lt_s2_ref2.mp3", type="audio/mp3">
+    </audio>
+    <!-- </small></small> -->
+
+    <div class="columns is-centered">
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>T5-Voc Other</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_t5_other.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>MAC-Voc Other</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_padvccfm_other.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>MAC-Voc</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_padvccfm.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>T5-Voc</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_t5.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+    </div>
+
+    Reference:
+    <br>
+    <audio controls>
+      <source src="static/samples/similarity/sim_lt_s3_ref3.mp3", type="audio/mp3">
+    </audio>
+    <!-- </small></small> -->
+
+    <div class="columns is-centered">
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>T5-Voc Other</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_t5_other.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>MAC-Voc Other</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_padvccfm_other.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>MAC-Voc</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_padvccfm.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>T5-Voc</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_t5.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+    </div>
+
+    Reference:
+    <br>
+    <audio controls>
+      <source src="static/samples/similarity/sim_lt_s4_ref0.mp3", type="audio/mp3">
+    </audio>
+    <!-- </small></small> -->
+
+    <div class="columns is-centered">
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>T5-Voc Other</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_t5_other.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>MAC-Voc Other</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_padvccfm_other.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>MAC-Voc</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_padvccfm.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+
+      <div class="column">
+          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+          <!-- <small><small> -->
+          <br>Model / Performer Condition: <b>T5-Voc</b>
+          <!-- <br><br> -->
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_t5.mp3", type="audio/mp3">
+          </audio>
+        <!-- </small></small> -->
+      </div>
+    </div>
+
+    <!-- Reference:
+    <br>
+    <audio controls>
+      <source src="static/samples/similarity/sim_lt_s6_ref0.mp3", type="audio/mp3">
+    </audio>
+
+    <div class="columns is-centered">
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>T5-Voc Other</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_t5_other.mp3", type="audio/mp3">
+          </audio>
+      </div>
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>MAC-Voc Other</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_padvccfm_other.mp3", type="audio/mp3">
+          </audio>
+      </div>
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>MAC-Voc</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_padvccfm.mp3", type="audio/mp3">
+          </audio>
+      </div>
+
+      <div class="column">
+          <br>Model / Performer Condition: <b>T5-Voc</b>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_t5.mp3", type="audio/mp3">
+          </audio>
+      </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+    </small></small>
+
+
+    <!-- <div class="columns is-centered">
+      <small><small>
+
+      <div class="column">
+
+          <br>Model / Performer Condition: <b>T5-Voc Other</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_t5_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_t5_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s0_t5_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_t5_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_t5_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_t5_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+      <div class="column">
+          <small><small>
+          <br>Model / Performer Condition: <b>MAT-Voc Other</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_padvccfm_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_padvccfm_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s0_padvccfm_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_padvccfm_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_padvccfm_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_padvccfm_other.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+      <div class="column">
+          <small><small>
+          <br>Model / Performer Condition: <b>MAT-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s0_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_padvccfm.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+
+
+
+
+      <div class="column">
+          <small><small>
+          <br>Model / Performer Condition: <b>T5-Voc</b>
+          <br><br>
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s2_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s1_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s0_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s3_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s4_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+          <audio controls>
+            <source src="static/samples/similarity/sim_lt_s6_t5.mp3", type="audio/mp3">
+          </audio><br><br>
+
+
+
+          </small></small>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div> -->
 
   </div>
 
