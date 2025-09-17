@@ -172,22 +172,12 @@ However, real-world audio often comprises multiple domains---for instance, music
       <li><a href="#section_speech_mushra">Speech MUSHRA-like Listening Test</a></li>
       <li><a href="#section_singing_mushra">Singing MUSHRA-like Listening Test</a></li>
       <li><a href="#section_singing_similarity">Singer Similarity Listening Test</a></li>
+      <li><a href="#feature_extractors">Feature Extractors and Repositories</a></li>
     </ul>
     <br>
 
     <h2 class="title is-3" id="section_speech">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    <!-- We provide samples converted with different styles and singer or band IDs.
-    <br>
-    All generated samples in this page were generated with the same T5 model from the paper, and vocoded with BigVGAN. -->
-    <!-- <br><br> -->
-    <!-- Song: <b>With a Little Help from My Friends (Beatles)</b>
-    <br>
-    <small><small>
-    Original:<br>
-    </small></small>
-    <audio id="lookin" controls>
-    <source src="static/samples/gt/with_a_little_help_from_my_friends.flac", type="audio/flac">
-    </audio> -->
+    The samples in this section are from the attention-based T5-Voc model. Each column corresponds to a speaker. In the first row we provide a real reference excerpt for each speaker ("Reference"). Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers.
     <div class="columns is-centered">
 
 
@@ -357,9 +347,12 @@ However, real-world audio often comprises multiple domains---for instance, music
   <section class="section">
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_singing_pop_winter">Singing Voice Conversion Samples&mdash;Popular Music & Schubert Winterreise<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    The samples in this section are conditioned on well-known singers of popular music and from the Schubert Winterreise dataset.
+The samples in this section are from the attention-based T5-Voc model, and are conditioned on well-known singers of popular music and from the Schubert Winterreise dataset. Data was obtained using vocal source separation software.
+<br>
+Similarly to the previous section, each column corresponds to a singer. In the first row we provide a real reference excerpt for each singer ("Reference"). Each of the remaining rows ("Generated") corresponds to a singing excerpt that is converted across singers.
     <br>
-    Data was obtained using vocal source separation software.
+    The last two rows are of singing excerpts in Hebrew. The first three columns are of non-Hebrew singers, demonstrating cross-language conversion.
+    <br>
     <!-- <br><br> -->
 
     <div class="columns is-centered">
@@ -384,7 +377,8 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/pop_s4_t1.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
+          <b>Generated (Hebrew):</b>
 
           <audio controls>
             <source src="static/samples/singing/pop_s3_t1.mp3", type="audio/mp3">
@@ -416,7 +410,9 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/pop_s4_t2.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
+
+          <b>Generated (Hebrew):</b>
 
           <audio controls>
             <source src="static/samples/singing/pop_s3_t2.mp3", type="audio/mp3">
@@ -447,7 +443,8 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/pop_s4_t3.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
+          <b>Generated (Hebrew):</b>
 
           <audio controls>
             <source src="static/samples/singing/pop_s3_t3.mp3", type="audio/mp3">
@@ -480,7 +477,8 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/pop_s4_t4.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
+          <b>Generated (Hebrew):</b>
 
           <audio controls>
             <source src="static/samples/singing/pop_s3_t4.mp3", type="audio/mp3">
@@ -501,7 +499,12 @@ However, real-world audio often comprises multiple domains---for instance, music
   <section class="section">
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_singing_singstyle111">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    The samples in this section are conditioned on singers from the Singstyle111 dataset, in which singers were recorded in isolation.
+    The samples in this section are from the attention-based T5-Voc model, and are conditioned on singers from the Singstyle111 dataset, in which singers were recorded in isolation.
+    <br>
+    Similarly to the previous section, each column corresponds to a singer. In the first row we provide a real reference excerpt for each singer ("Reference"). Each of the remaining rows ("Generated") corresponds to a singing excerpt that is converted across singers.
+        <br>
+        The last row is of a singing excerpt in Chinese.
+        <br>
     <!-- <br><br> -->
 
     <div class="columns is-centered">
@@ -526,12 +529,12 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/sing_s6_tf1.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
 
           <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tf1.mp3", type="audio/mp3">
           </audio><br><br> -->
-
+          <b>Generated (Chinese):</b>
           <audio controls>
             <source src="static/samples/singing/sing_s7_tf1.mp3", type="audio/mp3">
           </audio><br><br>
@@ -564,12 +567,13 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/sing_s6_tf4.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
 
           <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tf4.mp3", type="audio/mp3">
           </audio><br><br> -->
 
+          <b>Generated (Chinese):</b>
           <audio controls>
             <source src="static/samples/singing/sing_s7_tf4.mp3", type="audio/mp3">
           </audio><br><br>
@@ -595,12 +599,12 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/sing_s6_tm1.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
 
           <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tm1.mp3", type="audio/mp3">
           </audio><br><br> -->
-
+          <b>Generated (Chinese):</b>
           <audio controls>
             <source src="static/samples/singing/sing_s7_tm1.mp3", type="audio/mp3">
           </audio><br><br>
@@ -628,12 +632,13 @@ However, real-world audio often comprises multiple domains---for instance, music
 
           <audio controls>
             <source src="static/samples/singing/sing_s6_tm4.mp3", type="audio/mp3">
-          </audio><br><br>
+          </audio><br>
 
           <!-- <audio controls>
             <source src="static/samples/singing/sing_s5_tm4.mp3", type="audio/mp3">
           </audio><br><br> -->
 
+          <b>Generated (Chinese):</b>
           <audio controls>
             <source src="static/samples/singing/sing_s7_tm4.mp3", type="audio/mp3">
           </audio><br><br>
@@ -649,8 +654,7 @@ However, real-world audio often comprises multiple domains---for instance, music
   <section class="section">
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_speech_mushra">Speech MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    <!-- <br><br> -->
-
+    The samples in this section are from the speech MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures.
     <div class="columns is-centered">
 
 
@@ -757,11 +761,10 @@ However, real-world audio often comprises multiple domains---for instance, music
 
   </div>
 
-
+  <section class="section">
     <div class="container is-widescreen">
       <h2 class="title is-3" id="section_singing_mushra">Singing MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-
-
+The samples in this section are from the singing MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures.
     <div class="columns is-centered">
 
 
@@ -873,11 +876,12 @@ However, real-world audio often comprises multiple domains---for instance, music
       <h2 class="title is-3" id="section_singing_similarity">Singer Similarity Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
 
 
-    In this listening test, we render the same source with a target singer, and another randomly sampled singer. We ask the listener to rate similarity to the target singer. We compare the two models T5-Voc and MAC-Voc, yielding together four samples.
-
+    The samples in this section are from the singer similarity listening test. In this listening test, we render the same source with a target singer, and another randomly sampled singer. We ask the listener to rate similarity to the target singer. We compare the two models T5-Voc and MAC-Voc, yielding together four samples.
+    <br>
+    For each converted excerpt, we provide a reference excerpt (of other content) from the target singer.
     <small><small>
 
-    <br>
+    <br><br>
 
 
     <!-- Reference:
@@ -917,12 +921,14 @@ However, real-world audio often comprises multiple domains---for instance, music
       </div>
     </div> -->
 
+
     Reference:
     <br>
     <audio controls>
       <source src="static/samples/similarity/sim_lt_s2_ref2.mp3", type="audio/mp3">
     </audio>
     <!-- </small></small> -->
+
 
     <div class="columns is-centered">
 
@@ -1277,6 +1283,29 @@ However, real-world audio often comprises multiple domains---for instance, music
     </div> -->
 
   </div>
+
+  <br><br>
+
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="feature_extractors">Feature Extractors and Repositories<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+  We use the following feature extractors:
+  <br>
+  <a href="https://github.com/maxrmorrison/torchcrepe">CREPE</a> (vocal pitch)
+  <br>
+  <a href="https://huggingface.co/vitouphy/wav2vec2-xls-r-300m-timit-phoneme">wav2vec2.0 fine-tuned on the TIMIT dataset</a> (PPG)
+  <br>
+  <a href="https://github.com/benadar293/benadar293.github.io">Multi-instrument Onsets and Frames</a> (piano roll)
+  <br>
+  <br>
+  The compared models are derived from the following repositories:
+  <br>
+  <a href="https://github.com/shivammehta25/Matcha-TTS">Matcha-TTS</a>
+  <br>
+  <a href="https://github.com/as-ideas/ForwardTacotron">ForwardTacotron</a>
+  <br>
+  <a href="https://github.com/benadar293/midipm">T5 DDPM</a>
+  <br>
+</div>
 
 
     <script>
