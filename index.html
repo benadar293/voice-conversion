@@ -651,16 +651,359 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
   </div>
 
-  <section class="section">
+
+
+
+  <br><br>
+
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="section_speech_mushra">Speech MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+
+The samples in this section are from the speech MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures.
+
+  <small><small>
+
+  <br><br>
+
+
+  Reference:
+  <br>
+  <audio controls>
+    <source src="static/samples/speech/listening_test/lt_s1_ref.mp3", type="audio/mp3">
+  </audio>
+
+
+  <div class="columns is-centered">
+
+    <div class="column">
+        <br>Model: <b>PAD-Voc</b>
+
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s1_padvc.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>MAC-Voc</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s1_padvccfm.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-Voc</b>
+        <!-- <br><br> -->
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s1_t5.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-All</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s1_t5mix.mp3", type="audio/mp3">
+        </audio>
+    </div>
+  </div>
+
+
+
+  Reference:
+  <br>
+  <audio controls>
+    <source src="static/samples/speech/listening_test/lt_s2_ref.mp3", type="audio/mp3">
+  </audio>
+
+
+  <div class="columns is-centered">
+
+    <div class="column">
+        <br>Model: <b>PAD-Voc</b>
+
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s2_padvc.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>MAC-Voc</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s2_padvccfm.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-Voc</b>
+        <!-- <br><br> -->
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s2_t5.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-All</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s2_t5mix.mp3", type="audio/mp3">
+        </audio>
+    </div>
+  </div>
+
+  <!-- Reference:
+  <br>
+  <audio controls>
+    <source src="static/samples/speech/listening_test/lt_s0_ref.mp3", type="audio/mp3">
+  </audio>
+
+
+  <div class="columns is-centered">
+
+    <div class="column">
+        <br>Model: <b>PAD-Voc</b>
+
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s0_padvc.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>MAC-Voc</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s0_padvccfm.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-Voc</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s0_t5.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-All</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s0_t5mix.mp3", type="audio/mp3">
+        </audio>
+    </div>
+  </div> -->
+
+  Reference:
+  <br>
+  <audio controls>
+    <source src="static/samples/speech/listening_test/lt_s3_ref.mp3", type="audio/mp3">
+  </audio>
+
+  <div class="columns is-centered">
+
+    <div class="column">
+        <br>Model: <b>PAD-Voc</b>
+
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s3_padvc.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>MAC-Voc</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s3_padvccfm.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-Voc</b>
+        <!-- <br><br> -->
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s3_t5.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-All</b>
+        <audio controls>
+          <source src="static/samples/speech/listening_test/lt_s3_t5mix.mp3", type="audio/mp3">
+        </audio>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  </small></small>
+
+
+  </div>
+
+  <br><br>
+
+
+  <div class="container is-widescreen">
+    <h2 class="title is-3" id="section_singing_mushra">Singing MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+
+    The samples in this section are from the singing MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures.
+
+  <small><small>
+
+  <br><br>
+
+
+  Reference:
+  <br>
+  <audio controls>
+    <source src="static/samples/singing/listening_test/slt_s2_ref.mp3", type="audio/mp3">
+  </audio>
+
+
+  <div class="columns is-centered">
+
+    <div class="column">
+        <br>Model: <b>PAD-Voc</b>
+
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s2_padvc.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>MAC-Voc</b>
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s2_padvccfm.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-Voc</b>
+        <!-- <br><br> -->
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s2_t5.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-All</b>
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s2_t5mix.mp3", type="audio/mp3">
+        </audio>
+    </div>
+  </div>
+
+
+
+  Reference:
+  <br>
+  <audio controls>
+    <source src="static/samples/singing/listening_test/slt_s1_ref.mp3", type="audio/mp3">
+  </audio>
+
+
+  <div class="columns is-centered">
+
+    <div class="column">
+        <br>Model: <b>PAD-Voc</b>
+
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s1_padvc.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>MAC-Voc</b>
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s1_padvccfm.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-Voc</b>
+        <!-- <br><br> -->
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s1_t5.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-All</b>
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s1_t5mix.mp3", type="audio/mp3">
+        </audio>
+    </div>
+  </div>
+
+  Reference:
+  <br>
+  <audio controls>
+    <source src="static/samples/singing/listening_test/slt_s0_ref.mp3", type="audio/mp3">
+  </audio>
+
+
+  <div class="columns is-centered">
+
+    <div class="column">
+        <br>Model: <b>PAD-Voc</b>
+
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s0_padvc.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>MAC-Voc</b>
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s0_padvccfm.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-Voc</b>
+        <!-- <br><br> -->
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s0_t5.mp3", type="audio/mp3">
+        </audio>
+    </div>
+
+    <div class="column">
+        <br>Model: <b>T5-All</b>
+        <audio controls>
+          <source src="static/samples/singing/listening_test/slt_s0_t5mix.mp3", type="audio/mp3">
+        </audio>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  </small></small>
+
+
+  </div>
+
+  <br><br>
+
+
+
+  <!-- <section class="section">
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_speech_mushra">Speech MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     The samples in this section are from the speech MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures.
+
+
     <div class="columns is-centered">
 
 
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>PAD-Voc</b>
           <br><br>
@@ -682,7 +1025,6 @@ Similarly to the previous section, each column corresponds to a singer. In the f
       </div>
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>MAC-Voc</b>
           <br><br>
@@ -704,7 +1046,6 @@ Similarly to the previous section, each column corresponds to a singer. In the f
       </div>
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>T5-Voc</b>
           <br><br>
@@ -726,7 +1067,6 @@ Similarly to the previous section, each column corresponds to a singer. In the f
       </div>
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>T5-All</b>
           <br><br>
@@ -746,22 +1086,13 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
           </small></small>
       </div>
-
-
-
-
-
-
-
-
-
-
-
     </div>
+  </div> -->
 
-  </div>
 
-  <section class="section">
+
+
+  <!-- <section class="section">
     <div class="container is-widescreen">
       <h2 class="title is-3" id="section_singing_mushra">Singing MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
 The samples in this section are from the singing MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures.
@@ -770,7 +1101,6 @@ The samples in this section are from the singing MUSHRA-like listening test. The
 
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>PAD-Voc</b>
           <br><br>
@@ -792,7 +1122,6 @@ The samples in this section are from the singing MUSHRA-like listening test. The
       </div>
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>MAC-Voc</b>
           <br><br>
@@ -816,7 +1145,6 @@ The samples in this section are from the singing MUSHRA-like listening test. The
 
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>T5-Voc</b>
           <br><br>
@@ -838,7 +1166,6 @@ The samples in this section are from the singing MUSHRA-like listening test. The
       </div>
 
       <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
           <br>Model: <b>T5-All</b>
           <br><br>
@@ -869,7 +1196,7 @@ The samples in this section are from the singing MUSHRA-like listening test. The
 
     </div>
 
-  </div>
+  </div> -->
 
 <br><br>
     <div class="container is-widescreen">
