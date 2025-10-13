@@ -170,7 +170,15 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
     <br><br>
 
     <h2 class="title is-3" id="section_speech">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    The samples in this section are from the attention-based T5-Voc model trained on vocal data (speech and singing). Each column corresponds to a speaker. In the first row we provide a real reference excerpt for each speaker ("Target"). Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers.
+    The samples in this section are from our proposed attention-based T5-Voc model trained on vocal data (speech and singing). This model was used originally for instrumental music synthesis. As can be seen, <b>it can effectively be adapted to human voice conversion.</b>
+    The first column ("Source") provides real source excerpts which are converted across speakers.
+    Each of the next columns corresponds to a target speaker. The first row provides a real reference excerpt for each target speaker ("Target").
+    <!-- Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers. -->
+
+    <br>
+    Importantly, the version conditioning mechanism based on FiLM layers originally used to condition on acoustics, <b>can be effectively applied to condition on the speaker</b>.
+    <br>
+    For a comparison with the FlowMAC model based on MatchTTS and ForwardTacotron, see the section on the <a href="#section_speech_mushra">speech MUSHRA-like listening test.</a>
     <div class="columns is-centered">
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
@@ -404,10 +412,22 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
   <section class="section">
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_singing_singstyle111">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    The samples in this section are from the attention-based T5-Voc model, and are conditioned on singers from the Singstyle111 dataset, in which singers were recorded in isolation.
+    The samples in this section are from our proposed attention-based T5-Voc model trained on vocal data (speech and singing). Similarly to speech, this model originally used for instrumental music synthesis <b>can be effectively adapted to singing voice conversion,</b>
+    with <b> the FiLM-based version-conditioning mechanism applied to condition on the singer</b>.
+    The first column ("Source") provides real source excerpts which are converted across singers.
+    Each of the next columns corresponds to a target singer. The first row provides a real reference excerpt for each target singer ("Target").
+    <!-- We adapt the pitch to the range of the target singer. -->
+    <!-- Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers. -->
     <br>
-    We provide four source audio excerpts from which we extract pitch and phonetics, and four target singers. Each of the four sources is converted conditioned on each of the four target singers, yielding 16 generated excerpts.
-    <br> It can be seen that although the phonetic posteriorgram extractor was trained on speech data only, it can still capture phonetic content for singing voice conversion.
+    For a comparison with the FlowMAC model based on MatchTTS and ForwardTacotron, see the section on the <a href="#section_singing_mushra">singing MUSHRA-like listening test.</a>
+
+
+    <!-- The samples in this section are from the attention-based T5-Voc model, and are conditioned on singers from the Singstyle111 dataset, in which singers were recorded in isolation. -->
+    <!-- <br> -->
+    <!-- We provide four source audio excerpts from which we extract pitch and phonetics, and four target singers. Each of the four sources is converted conditioned on each of the four target singers, yielding 16 generated excerpts. -->
+    <br>
+    <b>Most importantly, it can be observed that although the phonetic posteriorgram extractor used to condition on phonetic content was trained on speech data only, it can still capture phonetic content in singing samples. The extracted phonetic content is then preserved when swapping the singer.</b>
+       <!-- for singing voice conversion. -->
     <br>
 
   <!-- <div class="columns is-centered">
