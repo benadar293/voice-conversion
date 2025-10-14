@@ -158,252 +158,17 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
     <h2 class="title is-3" id="contents">Contents</h2>
 
       <ul style="list-style-type:disc;padding-left:40px">
-      <li><a href="#section_speech">Speech Voice Conversion Samples</a></li>
-      <li><a href="#section_singing_singstyle111">Singing Voice Conversion Samples (elaborate comparison to source)&mdash;Singstyle111 Dataset</a></li>
+      <li><a href="#section_singing_singstyle111">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset</a></li>
       <li><a href="#section_singing_pop_winter">Singing Voice Conversion Samples&mdash;Popular Music & Schubert Winterreise</a></li>
+      <li><a href="#section_speech">Speech Voice Conversion Samples</a></li>
       <li><a href="#section_speech_mushra">Speech MUSHRA-like Listening Test</a></li>
       <li><a href="#section_singing_mushra">Singing MUSHRA-like Listening Test</a></li>
       <li><a href="#section_singing_similarity">Singer Similarity Listening Test</a></li>
       <li><a href="#section_mix">Vocal&ndash;Instrumental Conversion Samples</a></li>
       <li><a href="#feature_extractors">Feature Extractors, Repositories, and Figures</a></li>
     </ul>
-    <br><br>
 
-    <h2 class="title is-3" id="section_speech">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    The samples in this section are from our proposed attention-based T5-Voc model trained on vocal data (speech and singing). This model was used originally for instrumental music synthesis. As can be seen, <b>it can effectively be adapted to human voice conversion.</b>
-    The first column ("Source") provides real source excerpts which are converted across speakers.
-    Each of the next columns corresponds to a target speaker. The first row provides a real reference excerpt for each target speaker ("Target").
-    <!-- Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers. -->
 
-    <br>
-    Importantly, the version conditioning mechanism based on FiLM layers originally used to condition on acoustics, <b>can be effectively applied to condition on the speaker</b>.
-    <br>
-    For a comparison with the FlowMAC model based on MatchTTS and ForwardTacotron, see the section on the <a href="#section_speech_mushra">speech MUSHRA-like listening test.</a>
-    <div class="columns is-centered">
-      <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
-          <small><small>
-          <div style="height: 128px;">&nbsp;</div>
-          <b>Source 1:</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/sources/speech_s1.mp3", type="audio/mp3">
-          </audio>
-
-          <b>Source 2:</b><br>
-
-          <!-- <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/sources/speech_s2.mp3", type="audio/mp3">
-          </audio><br><br> -->
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/sources/speech_s3.mp3", type="audio/mp3">
-          </audio>
-
-          <b>Source 3:</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/sources/speech_s7.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Source 4:</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/sources/speech_s4.mp3", type="audio/mp3">
-          </audio>
-
-          <b>Source 5:</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/sources/speech_s5.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-      </div>
-
-      <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
-          <small><small>
-          <br><b>Target 1:</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/reference/speech_F1_ref.mp3", type="audio/mp3">
-          </audio><br><br>
-          <b>Generated (S1T1):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s1t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2T1):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s3t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3T1):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s7t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4T1):</b><br>
-
-          <!-- <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s2t2.mp3", type="audio/mp3">
-          </audio><br><br> -->
-
-
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s4t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5T1):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s5t2.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-      </div>
-
-
-
-
-      <div class="column">
-          <small><small>
-          <br><b>Target 2:</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/reference/speech_F2_ref.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          <b>Generated (S1T2):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s1t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2T2):</b><br>
-
-          <!-- <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s2t4.mp3", type="audio/mp3">
-          </audio><br><br> -->
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s3t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3T2):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s7t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4T2):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s4t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5T2):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s5t4.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-
-      </div>
-
-      <div class="column">
-          <small><small>
-          <br><b>Target 3:</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/reference/speech_M1_ref.mp3", type="audio/mp3">
-          </audio><br><br>
-          <b>Generated (S1T3):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s1t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2T3):</b><br>
-
-          <!-- <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s2t3.mp3", type="audio/mp3">
-          </audio><br><br> -->
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s3t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3T3):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s7t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4T3):</b><br>
-
-
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s4t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5T3):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s5t3.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-
-      </div>
-
-
-      <div class="column">
-          <small><small>
-            <br><b>Target 4:</b><br>
-            <audio controls style="width: 240px; height: 50px">
-              <source src="static/samples/reference/speech_M2_ref.mp3", type="audio/mp3">
-            </audio><br><br>
-            <b>Generated (S1T4):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s1t5.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2T4):</b><br>
-
-          <!-- <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s2t5.mp3", type="audio/mp3">
-          </audio><br><br> -->
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s3t5.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3T4):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s7t5.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4T4):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s4t5.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5T4):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/speech/s5t5.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-
-      </div>
-
-
-    </div>
 
   </div>
 
@@ -1072,8 +837,247 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
   </div>
 
+  <section class="section">
+  <div class="container is-widescreen">
+
+  <h2 class="title is-3" id="section_speech">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+  The samples in this section are from our proposed attention-based T5-Voc model trained on vocal data (speech and singing). This model was used originally for instrumental music synthesis. As can be seen, <b>it can effectively be adapted to human voice conversion.</b>
+  The first column ("Source") provides real source excerpts which are converted across speakers.
+  Each of the next columns corresponds to a target speaker. The first row provides a real reference excerpt for each target speaker ("Target").
+  <!-- Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers. -->
+
+  <br>
+  Importantly, the version conditioning mechanism based on FiLM layers originally used to condition on acoustics, <b>can be effectively applied to condition on the speaker</b>.
+  <br>
+  For a comparison with the FlowMAC model based on MatchTTS and ForwardTacotron, see the section on the <a href="#section_speech_mushra">speech MUSHRA-like listening test.</a>
+  <div class="columns is-centered">
+    <div class="column">
+        <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+        <small><small>
+        <div style="height: 128px;">&nbsp;</div>
+        <b>Source 1:</b><br>
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/sources/speech_s1.mp3", type="audio/mp3">
+        </audio>
+
+        <b>Source 2:</b><br>
+
+        <!-- <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/sources/speech_s2.mp3", type="audio/mp3">
+        </audio><br><br> -->
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/sources/speech_s3.mp3", type="audio/mp3">
+        </audio>
+
+        <b>Source 3:</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/sources/speech_s7.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Source 4:</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/sources/speech_s4.mp3", type="audio/mp3">
+        </audio>
+
+        <b>Source 5:</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/sources/speech_s5.mp3", type="audio/mp3">
+        </audio><br><br>
+
+        </small></small>
+    </div>
+
+    <div class="column">
+        <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
+        <small><small>
+        <br><b>Target 1:</b><br>
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/reference/speech_F1_ref.mp3", type="audio/mp3">
+        </audio><br><br>
+        <b>Generated (S1T1):</b><br>
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s1t2.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S2T1):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s3t2.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S3T1):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s7t2.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S4T1):</b><br>
+
+        <!-- <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s2t2.mp3", type="audio/mp3">
+        </audio><br><br> -->
 
 
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s4t2.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S5T1):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s5t2.mp3", type="audio/mp3">
+        </audio><br><br>
+
+        </small></small>
+    </div>
+
+
+
+
+    <div class="column">
+        <small><small>
+        <br><b>Target 2:</b><br>
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/reference/speech_F2_ref.mp3", type="audio/mp3">
+        </audio><br><br>
+
+        <b>Generated (S1T2):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s1t4.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S2T2):</b><br>
+
+        <!-- <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s2t4.mp3", type="audio/mp3">
+        </audio><br><br> -->
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s3t4.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S3T2):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s7t4.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S4T2):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s4t4.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S5T2):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s5t4.mp3", type="audio/mp3">
+        </audio><br><br>
+
+        </small></small>
+
+    </div>
+
+    <div class="column">
+        <small><small>
+        <br><b>Target 3:</b><br>
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/reference/speech_M1_ref.mp3", type="audio/mp3">
+        </audio><br><br>
+        <b>Generated (S1T3):</b><br>
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s1t3.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S2T3):</b><br>
+
+        <!-- <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s2t3.mp3", type="audio/mp3">
+        </audio><br><br> -->
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s3t3.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S3T3):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s7t3.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S4T3):</b><br>
+
+
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s4t3.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S5T3):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s5t3.mp3", type="audio/mp3">
+        </audio><br><br>
+
+        </small></small>
+
+    </div>
+
+
+    <div class="column">
+        <small><small>
+          <br><b>Target 4:</b><br>
+          <audio controls style="width: 240px; height: 50px">
+            <source src="static/samples/reference/speech_M2_ref.mp3", type="audio/mp3">
+          </audio><br><br>
+          <b>Generated (S1T4):</b><br>
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s1t5.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S2T4):</b><br>
+
+        <!-- <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s2t5.mp3", type="audio/mp3">
+        </audio><br><br> -->
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s3t5.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S3T4):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s7t5.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S4T4):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s4t5.mp3", type="audio/mp3">
+        </audio><br>
+
+        <b>Generated (S5T4):</b><br>
+
+        <audio controls style="width: 240px; height: 50px">
+          <source src="static/samples/speech/s5t5.mp3", type="audio/mp3">
+        </audio><br><br>
+
+        </small></small>
+
+    </div>
+
+
+  </div>
+
+
+  </div>
 
 
 
