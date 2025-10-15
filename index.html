@@ -103,35 +103,11 @@
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
-                        <!-- <i class="ai ai-arxiv"></i> -->
                       </span>
                       <span>Preprint</span>
                     </a>
                   </span>
 
-
-                    <!-- <span class="link-block">
-                      <a href="static/pdfs/Multi_Aspect_Conditioning_Appendix.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span> -->
-
-
-                  <!-- <span class="link-block">
-                    <a href="https://github.com/benadar293/multi-aspect-conditioning" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Repo</span>
-                  </a>
-                </span> -->
-
-                <!-- ArXiv abstract Link -->
 
             </div>
           </div>
@@ -186,292 +162,26 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
     The extracted phonetic content is then preserved when swapping the singer.
 
 
-
-    <!-- with <b> the FiLM-based version-conditioning mechanism applied to condition on the singer</b>. -->
-
-    <!-- We adapt the pitch to the range of the target singer. -->
-    <!-- Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers. -->
     <br>
     For a comparison with the FlowMAC model based on MatchaTTS and ForwardTacotron, see the section on the <a href="#section_singing_mushra">singing MUSHRA-like listening test.</a>
 
 
-    <!-- The samples in this section are from the attention-based T5-Voc model, and are conditioned on singers from the Singstyle111 dataset, in which singers were recorded in isolation. -->
-    <!-- <br> -->
-    <!-- We provide four source audio excerpts from which we extract pitch and phonetics, and four target singers. Each of the four sources is converted conditioned on each of the four target singers, yielding 16 generated excerpts. -->
+
     <br>
-       <!-- for singing voice conversion. -->
     <br>
 
-  <!-- <div class="columns is-centered">
-  <div class="column">
-      <small><small>
-        <br><b>Target:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/reference/singing_F1_ref.mp3", type="audio/mp3">
-        </audio><br>
-      </small></small>
-  </div>
-
-  <div class="column">
-      <small><small>
-        <br><b>Target:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/reference/singing_F4_ref.mp3", type="audio/mp3">
-        </audio><br>
-      </small></small>
-  </div>
-
-  <div class="column">
-      <small><small>
-        <br><b>Target:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/reference/singing_M1_ref.mp3", type="audio/mp3">
-        </audio><br>
-      </small></small>
-  </div>
-
-  <div class="column">
-      <small><small>
-        <br><b>Target:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/reference/singing_M4_ref.mp3", type="audio/mp3">
-        </audio><br>
-      </small></small>
-  </div>
-
-
-  </div><br> -->
-
-        <!-- <small><small>
-          <b>Source:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/singing/sources/sing_s2.mp3", type="audio/mp3">
-        </audio>
-        </small></small>
-        <div class="columns is-centered">
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s2_tf1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s2_tf4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s2_tm1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s2_tm4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-
-        </div>
-        <br>
-
-        <small><small>
-          <b>Source:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/singing/sources/sing_s4.mp3", type="audio/mp3">
-        </audio>
-        </small></small>
-        <div class="columns is-centered">
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s4_tf1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s4_tf4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s4_tm1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s4_tm4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-
-        </div>
-
-        <br>
-
-        <small><small>
-          <b>Source:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/singing/sources/sing_s6.mp3", type="audio/mp3">
-        </audio>
-        </small></small>
-        <div class="columns is-centered">
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s6_tf1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s6_tf4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s6_tm1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s6_tm4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-
-        </div>
-
-
-        <br>
-
-        <small><small>
-          <b>Source:</b><br>
-        <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/singing/sources/sing_s7.mp3", type="audio/mp3">
-        </audio>
-        </small></small>
-        <div class="columns is-centered">
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s7_tf1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s7_tf4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s7_tm1.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-          <div class="column">
-              <small><small>
-                <br><b>Generated:</b><br>
-                <audio controls style="width: 240px; height: 50px">
-                  <source src="static/samples/singing/sing_s7_tm4.mp3", type="audio/mp3">
-                </audio><br>
-              </small></small>
-          </div>
-
-
-        </div> -->
 
 
 
     <div class="columns is-centered">
 
 
-      <!-- <div class="column">
-          <small><small>
-            <b>Source:</b>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/sing_s2.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/sing_s4.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/sing_s6.mp3", type="audio/mp3">
-          </audio><br>
-          <br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/sing_s7.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-      </div> -->
 
       <div class="column">
           <small><small>
             <div style="height: 128px;">&nbsp;</div>
-            <!-- <br><b>Source 1:</b><br>
-            <audio controls style="width: 240px; height: 50px">
-              <source src="static/samples/singing/sources/sing_s2.mp3", type="audio/mp3">
-            </audio>
 
-            <br><b>Target 1:</b><br>
-            <audio controls style="width: 240px; height: 50px">
-              <source src="static/samples/reference/singing_F1_ref.mp3", type="audio/mp3">
-            </audio><br><br> -->
-            <b>Source 1:</b>
+            <b>Source 1 (<span style="color:CornflowerBlue">M1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sources/sing_s2.mp3", type="audio/mp3">
           </audio><br>
@@ -495,28 +205,25 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
 
       <div class="column">
           <small><small>
-            <!-- <br><b>Source 1:</b><br>
-            <audio controls style="width: 240px; height: 50px">
-              <source src="static/samples/singing/sources/sing_s2.mp3", type="audio/mp3">
-            </audio> -->
 
-            <br><b>Target 1:</b><br>
+
+            <br><b>Target (<span style="color:Orchid">F1</span>):</b><br>
             <audio controls style="width: 240px; height: 50px">
               <source src="static/samples/reference/singing_F1_ref.mp3", type="audio/mp3">
             </audio><br><br>
-            <b>Generated (S1T1):</b>
+            <b>Generated (S1, <span style="color:Orchid">F1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s2_tf1.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S2T1):</b>
+          <b>Generated (S2, <span style="color:Orchid">F1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s4_tf1.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S3T1):</b>
+          <b>Generated (S3, <span style="color:Orchid">F1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s6_tf1.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S4T1):</b>
+          <b>Generated (S4, <span style="color:Orchid">F1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s7_tf1.mp3", type="audio/mp3">
           </audio><br><br>
@@ -534,27 +241,24 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
 
       <div class="column">
           <small><small>
-            <!-- <br><b>Source 2:</b><br>
-            <audio controls style="width: 240px; height: 50px">
-              <source src="static/samples/singing/sources/sing_s4.mp3", type="audio/mp3">
-            </audio> -->
-            <br><b>Target 2:</b><br>
+
+            <br><b>Target (<span style="color:DarkMagenta">F4</span>):</b><br>
             <audio controls style="width: 240px; height: 50px">
               <source src="static/samples/reference/singing_F4_ref.mp3", type="audio/mp3">
             </audio><br><br>
-            <b>Generated (S1T2):</b>
+            <b>Generated (S1, <span style="color:DarkMagenta">F4</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s2_tf4.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S2T2):</b>
+          <b>Generated (S2, <span style="color:DarkMagenta">F4</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s4_tf4.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S3T2):</b>
+          <b>Generated (S3, <span style="color:DarkMagenta">F4</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s6_tf4.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S4T2):</b>
+          <b>Generated (S4, <span style="color:DarkMagenta">F4</span>):</b>
           <br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s7_tf4.mp3", type="audio/mp3">
@@ -570,23 +274,23 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
             <audio controls style="width: 240px; height: 50px">
               <source src="static/samples/singing/sources/sing_s6.mp3", type="audio/mp3">
             </audio> -->
-          <br><b>Target 3:</b><br>
+          <br><b>Target (<span style="color:CornflowerBlue">M1</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/reference/singing_M1_ref.mp3", type="audio/mp3">
           </audio><br><br>
-          <b>Generated (S1T3):</b>
+          <b>Generated (S1, <span style="color:CornflowerBlue">M1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s2_tm1.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S2T3):</b>
+          <b>Generated (S2, <span style="color:CornflowerBlue">M1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s4_tm1.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S3T3):</b>
+          <b>Generated (S3, <span style="color:CornflowerBlue">M1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s6_tm1.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S4T3):</b>
+          <b>Generated (S4, <span style="color:CornflowerBlue">M1</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s7_tm1.mp3", type="audio/mp3">
           </audio><br><br>
@@ -602,25 +306,25 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
             <audio controls style="width: 240px; height: 50px">
               <source src="static/samples/singing/sources/sing_s7.mp3", type="audio/mp3">
             </audio> -->
-          <br><b>Target 4:</b><br>
+          <br><b>Target (<span style="color:DarkBlue">M4</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/reference/singing_M4_ref.mp3", type="audio/mp3">
           </audio><br><br>
-          <b>Generated (S1T4):</b>
+          <b>Generated (S1, <span style="color:DarkBlue">M4</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s2_tm4.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S2T4):</b>
+          <b>Generated (S2, <span style="color:DarkBlue">M4</span>):</b>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s4_tm4.mp3", type="audio/mp3">
           </audio><br>
-          <b>Generated (S3T4):</b>
+          <b>Generated (S3, <span style="color:DarkBlue">M4</span>):</b>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s6_tm4.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S4T4):</b>
+          <b>Generated (S4, <span style="color:DarkBlue">M4</span>):</b>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sing_s7_tm4.mp3", type="audio/mp3">
@@ -648,30 +352,30 @@ Similarly to the previous section, each column corresponds to a singer. In the f
       <div class="column">
           <small><small>
             <div style="height: 128px;">&nbsp;</div>
-          <b>Source 1:</b><br>
+          <b>Source 1 (The Beatles, With a Little Help):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sources/pop_s5.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Source 2:</b><br>
+          <b>Source 2 (Creedence, Lookin' Out):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sources/pop_s1.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Source 3:</b><br>
+          <b>Source 3 (<span style="color:PaleVioletRed">Madonna</span>, Like a Virgin):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sources/pop_s4.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Source 4:</b><br>
+          <b>Source 4 (<span style="color:DarkCyan">Matti Caspi</span>, Hine Hine):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sources/pop_s3.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Source 5:</b><br>
+          <b>Source 5 (Yehudit Ravitz, Derech Hameshi):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/sources/pop_s2.mp3", type="audio/mp3">
@@ -682,34 +386,34 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
       <div class="column">
           <small><small>
-            <br><b>Target (The Doors):</b><br>
+            <br><b>Target (<span style="color:MediumSeaGreen">The Doors</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/reference/doors_ref.mp3", type="audio/mp3">
           </audio><br><br>
-          <b>Generated (S1, The Doors):</b><br>
+          <b>Generated (S1, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s5_t1.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S2, The Doors):</b><br>
+          <b>Generated (S2, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s1_t1.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S3, The Doors):</b><br>
+          <b>Generated (S3, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s4_t1.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S4, The Doors):</b><br>
+          <b>Generated (S4, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s3_t1.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S5, The Doors):</b><br>
+          <b>Generated (S5, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s2_t1.mp3", type="audio/mp3">
@@ -722,34 +426,34 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
       <div class="column">
           <small><small>
-            <br><b>Target (Dietrich Fischer-Dieskau):</b><br>
+            <br><b>Target (<span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span>):</b><br>
             <audio controls style="width: 240px; height: 50px">
               <source src="static/samples/reference/fischer_dieskau_ref.mp3", type="audio/mp3">
             </audio><br><br>
-            <b>Generated (S1, Dietrich Fischer-Dieskau):</b><br>
+            <b>Generated (S1, <span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s5_t2.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S2, Dietrich Fischer-Dieskau):</b><br>
+          <b>Generated (S2, <span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s1_t2.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S3, Dietrich Fischer-Dieskau):</b><br>
+          <b>Generated (S3, <span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s4_t2.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S4, Dietrich Fischer-Dieskau):</b><br>
+          <b>Generated (S4, <span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s3_t2.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S5, Dietrich Fischer-Dieskau):</b><br>
+          <b>Generated (S5, <span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s2_t2.mp3", type="audio/mp3">
@@ -761,34 +465,34 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
       <div class="column">
           <small><small>
-            <br><b>Target (Madonna):</b><br>
+            <br><b>Target (<span style="color:PaleVioletRed">Madonna</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/reference/madonna_ref.mp3", type="audio/mp3">
           </audio><br><br>
-          <b>Generated (S1, Madonna):</b><br>
+          <b>Generated (S1, <span style="color:PaleVioletRed">Madonna</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s5_t3.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S2, Madonna):</b><br>
+          <b>Generated (S2, <span style="color:PaleVioletRed">Madonna</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s1_t3.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S3, Madonna):</b><br>
+          <b>Generated (S3, <span style="color:PaleVioletRed">Madonna</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s4_t3.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S4, Madonna):</b><br>
+          <b>Generated (S4, <span style="color:PaleVioletRed">Madonna</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s3_t3.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S5, Madonna):</b><br>
+          <b>Generated (S5, <span style="color:PaleVioletRed">Madonna</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s2_t3.mp3", type="audio/mp3">
@@ -803,34 +507,34 @@ Similarly to the previous section, each column corresponds to a singer. In the f
       <div class="column">
           <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
           <small><small>
-            <br><b>Target (Matti Caspi):</b><br>
+            <br><b>Target (<span style="color:DarkCyan">Matti Caspi</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/reference/matti_caspi_ref.mp3", type="audio/mp3">
           </audio><br><br>
-          <b>Generated (S1, Matti Caspi):</b><br>
+          <b>Generated (S1, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s5_t4.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S2, Matti Caspi):</b><br>
+          <b>Generated (S2, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s1_t4.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S3, Matti Caspi):</b><br>
+          <b>Generated (S3, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s4_t4.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S4, Matti Caspi):</b><br>
+          <b>Generated (S4, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s3_t4.mp3", type="audio/mp3">
           </audio><br>
 
-          <b>Generated (S5, Matti Caspi):</b><br>
+          <b>Generated (S5, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
 
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/singing/pop_s2_t4.mp3", type="audio/mp3">
@@ -849,14 +553,10 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
   <h2 class="title is-3" id="section_speech">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
   In this section we provide speech voice conversion samples from our proposed attention-based T5-Voc model trained on vocal data (speech and singing).
-  <!-- This model was used originally for instrumental music synthesis. As can be seen, <b>it can effectively be adapted to human voice conversion.</b> -->
   The first column ("Source") provides real source excerpts which are converted across speakers.
   Each of the next columns corresponds to a target speaker. The first row provides a real reference excerpt for each target speaker ("Target").
   Similarly to the previous sections, it can be seen that the FiLM-based version conditioning mechanism originally used to condition on acoustics, can be used to condition on the speaker.
-  <!-- Each of the remaining rows ("Generated") corresponds to a speech excerpt that is converted across speakers. -->
 
-  <!-- <br> -->
-  <!-- Importantly, the version conditioning mechanism based on FiLM layers originally used to condition on acoustics, <b>can be effectively applied to condition on the speaker</b>. -->
   <br>
   For a comparison with the FlowMAC model based on MatchaTTS and ForwardTacotron, see the section on the <a href="#section_speech_mushra">speech MUSHRA-like listening test.</a>
   <div class="columns is-centered">
@@ -869,29 +569,26 @@ Similarly to the previous section, each column corresponds to a singer. In the f
           <source src="static/samples/speech/sources/speech_s1.mp3", type="audio/mp3">
         </audio>
 
-        <b>Source 2:</b><br>
+        <b>Source 2 (<span style="color:SteelBlue">Tim</span>):</b><br>
 
-        <!-- <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/speech/sources/speech_s2.mp3", type="audio/mp3">
-        </audio><br><br> -->
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/sources/speech_s3.mp3", type="audio/mp3">
         </audio>
 
-        <b>Source 3:</b><br>
+        <b>Source 3 (<span style="color:MediumOrchid">Chantal</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/sources/speech_s7.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Source 4:</b><br>
+        <b>Source 4 (<span style="color:MediumSlateBlue">Ian</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/sources/speech_s4.mp3", type="audio/mp3">
         </audio>
 
-        <b>Source 5:</b><br>
+        <b>Source 5 (<span style="color:SteelBlue">Tim</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/sources/speech_s5.mp3", type="audio/mp3">
@@ -901,34 +598,29 @@ Similarly to the previous section, each column corresponds to a singer. In the f
     </div>
 
     <div class="column">
-        <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
         <small><small>
-        <br><b>Target 1:</b><br>
+        <br><b>Target (<span style="color:MediumOrchid">Chantal</span>):</b><br>
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/reference/speech_F1_ref.mp3", type="audio/mp3">
         </audio><br><br>
-        <b>Generated (S1T1):</b><br>
+        <b>Generated (S1, <span style="color:MediumOrchid">Chantal</span>):</b><br>
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s1t2.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S2T1):</b><br>
+        <b>Generated (S2, <span style="color:MediumOrchid">Chantal</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s3t2.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S3T1):</b><br>
+        <b>Generated (S3, <span style="color:MediumOrchid">Chantal</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s7t2.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S4T1):</b><br>
-
-        <!-- <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/speech/s2t2.mp3", type="audio/mp3">
-        </audio><br><br> -->
+        <b>Generated (S4, <span style="color:MediumOrchid">Chantal</span>):</b><br>
 
 
 
@@ -936,7 +628,7 @@ Similarly to the previous section, each column corresponds to a singer. In the f
           <source src="static/samples/speech/s4t2.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S5T1):</b><br>
+        <b>Generated (S5, <span style="color:MediumOrchid">Chantal</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s5t2.mp3", type="audio/mp3">
@@ -950,40 +642,37 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
     <div class="column">
         <small><small>
-        <br><b>Target 2:</b><br>
+        <br><b>Target (<span style="color:RebeccaPurple">Female 2</span>):</b><br>
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/reference/speech_F2_ref.mp3", type="audio/mp3">
         </audio><br><br>
 
-        <b>Generated (S1T2):</b><br>
+        <b>Generated (S1, <span style="color:RebeccaPurple">Female 2</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s1t4.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S2T2):</b><br>
+        <b>Generated (S2, <span style="color:RebeccaPurple">Female 2</span>):</b><br>
 
-        <!-- <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/speech/s2t4.mp3", type="audio/mp3">
-        </audio><br><br> -->
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s3t4.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S3T2):</b><br>
+        <b>Generated (S3, <span style="color:RebeccaPurple">Female 2</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s7t4.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S4T2):</b><br>
+        <b>Generated (S4, <span style="color:RebeccaPurple">Female 2</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s4t4.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S5T2):</b><br>
+        <b>Generated (S5, <span style="color:RebeccaPurple">Female 2</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s5t4.mp3", type="audio/mp3">
@@ -995,32 +684,30 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
     <div class="column">
         <small><small>
-        <br><b>Target 3:</b><br>
+        <br><b>Target (<span style="color:SteelBlue">Tim</span>):</b><br>
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/reference/speech_M1_ref.mp3", type="audio/mp3">
         </audio><br><br>
-        <b>Generated (S1T3):</b><br>
+        <b>Generated (S1, <span style="color:SteelBlue">Tim</span>):</b><br>
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s1t3.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S2T3):</b><br>
+        <b>Generated (S2, <span style="color:SteelBlue">Tim</span>):</b><br>
 
-        <!-- <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/speech/s2t3.mp3", type="audio/mp3">
-        </audio><br><br> -->
+
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s3t3.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S3T3):</b><br>
+        <b>Generated (S3, <span style="color:SteelBlue">Tim</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s7t3.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S4T3):</b><br>
+        <b>Generated (S4, <span style="color:SteelBlue">Tim</span>):</b><br>
 
 
 
@@ -1028,7 +715,7 @@ Similarly to the previous section, each column corresponds to a singer. In the f
           <source src="static/samples/speech/s4t3.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S5T3):</b><br>
+        <b>Generated (S5, <span style="color:SteelBlue">Tim</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s5t3.mp3", type="audio/mp3">
@@ -1041,38 +728,34 @@ Similarly to the previous section, each column corresponds to a singer. In the f
 
     <div class="column">
         <small><small>
-          <br><b>Target 4:</b><br>
+          <br><b>Target (<span style="color:MediumSlateBlue">Ian</span>):</b><br>
           <audio controls style="width: 240px; height: 50px">
             <source src="static/samples/reference/speech_M2_ref.mp3", type="audio/mp3">
           </audio><br><br>
-          <b>Generated (S1T4):</b><br>
+          <b>Generated (S1, <span style="color:MediumSlateBlue">Ian</span>):</b><br>
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s1t5.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S2T4):</b><br>
-
-        <!-- <audio controls style="width: 240px; height: 50px">
-          <source src="static/samples/speech/s2t5.mp3", type="audio/mp3">
-        </audio><br><br> -->
+        <b>Generated (S2, <span style="color:MediumSlateBlue">Ian</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s3t5.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S3T4):</b><br>
+        <b>Generated (S3, <span style="color:MediumSlateBlue">Ian</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s7t5.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S4T4):</b><br>
+        <b>Generated (S4, <span style="color:MediumSlateBlue">Ian</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s4t5.mp3", type="audio/mp3">
         </audio><br>
 
-        <b>Generated (S5T4):</b><br>
+        <b>Generated (S5, <span style="color:MediumSlateBlue">Ian</span>):</b><br>
 
         <audio controls style="width: 240px; height: 50px">
           <source src="static/samples/speech/s5t5.mp3", type="audio/mp3">
@@ -2074,21 +1757,21 @@ The samples in this section are from the singing MUSHRA-like listening test. The
 
       <div class="column">
           <small><small>
-          Source: <b>Riders on The Storm (The Doors)</b><br>Target: <b>Dietrich Fischer-Dieskau</b>
+          Source: <b>Riders on The Storm (The Doors)</b><br>Target: <b><span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span></b>
           <audio controls>
             <source src="static/samples/mix/mix_s7_t3.mp3", type="audio/mp3">
           </audio><br>
-          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b>Dietrich Fischer-Dieskau</b>
+          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b><span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span></b>
           <audio controls>
             <source src="static/samples/mix/mix_s5_t3.mp3", type="audio/mp3">
           </audio><br>
 
-          Source: <b>Like a Virgin (Madonna)</b><br>Target: <b>Dietrich Fischer-Dieskau</b>
+          Source: <b>Like a Virgin (Madonna)</b><br>Target: <b><span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span></b>
           <audio controls>
             <source src="static/samples/mix/mix_s4_t3.mp3", type="audio/mp3">
           </audio><br>
 
-Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b>Dietrich Fischer-Dieskau</b>
+Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b><span style="color:DarkSlateBlue">Dietrich Fischer-Dieskau</span></b>
           <audio controls>
             <source src="static/samples/mix/mix_s3_t3.mp3", type="audio/mp3">
           </audio><br><br>
@@ -2105,25 +1788,25 @@ Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b>Dietrich Fischer-Dieskau</b
 
       <div class="column">
           <small><small>
-          Source: <b>Riders on The Storm (The Doors)</b><br>Target: <b>The Doors</b>
+          Source: <b>Riders on The Storm (The Doors)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b>
 <br>
           <audio controls>
             <source src="static/samples/mix/mix_s7_t2.mp3", type="audio/mp3">
           </audio><br>
 
-          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b>The Doors</b>
+          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b>
           <br>
           <audio controls>
             <source src="static/samples/mix/mix_s5_t2.mp3", type="audio/mp3">
           </audio><br>
 
-          Source: <b>Like a Virgin (Madonna)</b><br>Target: <b>The Doors</b>
+          Source: <b>Like a Virgin (Madonna)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b>
           <br>
           <audio controls>
             <source src="static/samples/mix/mix_s4_t2.mp3", type="audio/mp3">
           </audio><br>
 
-          Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b>The Doors</b><br>
+          Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b><br>
 
           <audio controls>
             <source src="static/samples/mix/mix_s3_t2.mp3", type="audio/mp3">
@@ -2144,7 +1827,7 @@ Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b>Dietrich Fischer-Dieskau</b
             <source src="static/samples/mix/mix_s7_t6.mp3", type="audio/mp3">
           </audio><br>
 
-          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b>Jimi Hendrix</b>
+          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b><span style="color:FireBrick">Jimi Hendrix</span></b>
           <br>
 
           <audio controls>
@@ -2158,11 +1841,9 @@ Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b>Dietrich Fischer-Dieskau</b
             <source src="static/samples/mix/mix_s6_t5.mp3", type="audio/mp3">
           </audio><br>
 
-          Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b>Jimi Hendrix</b><br>
+          Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b><span style="color:FireBrick">Jimi Hendrix</span></b><br>
 
-          <!-- <audio controls>
-            <source src="static/samples/mix/mix_s3_t5.mp3", type="audio/mp3">
-          </audio><br><br> -->
+
 
           <audio controls>
             <source src="static/samples/mix/mix_s3_t1.mp3", type="audio/mp3">
