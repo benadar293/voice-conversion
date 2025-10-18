@@ -154,15 +154,15 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_singing_singstyle111">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     <p align="justify">
-    The samples in this section are generated using our proposed attention-based T5-Voc model, trained on both <b>speech and singing data</b>.
+    The samples in this section are generated using our proposed <b>attention-based T5-Voc model</b>, trained on both <b>speech and singing data</b>.
     The first column <b>("Source")</b> presents real vocal excerpts that are converted across different singers.
     Each subsequent column corresponds to a <b>target singer</b>, and the first row <b>("Target")</b> provides a real reference excerpt for each.
     <br>
-    Originally developed for instrumental music synthesis, this <b>T5-based diffusion model</b> has been effectively adapted for <b>singing voice conversion</b>.
+    Originally developed for <b>instrumental music synthesis</b>, this <b>T5-based diffusion model</b> has been effectively adapted for <b>singing voice conversion</b>.
     The <b>version conditioning mechanism</b>&mdash;implemented using <b>FiLM layers</b> and initially designed for acoustic conditioning in instrumental music synthesis&mdash;can be repurposed to <b>condition on singer identity</b>.
     <br>
-    Additionally, we use an off-the-shelf phonetic posteriorgram (PPG) extractor, trained only on speech, to condition the model on phonetic content.
-    Despite being trained exclusively on speech, the PPG extractor successfully captures the phonetic content of singing, which is preserved during singer conversion.
+    Additionally, we use an off-the-shelf <b>phonetic posteriorgram (PPG)</b> extractor, trained only on speech, to condition the model on phonetic content.
+    <b>Despite being trained exclusively on speech, the PPG extractor successfully captures the phonetic content of singing</b>, which is preserved during singer conversion.
     <br>
     For a comparison with the FlowMAC model (based on MatchaTTS and ForwardTacotron), refer to the <a href="#section_singing_mushra">singing MUSHRA-like listening test</a> section.
   </p>
