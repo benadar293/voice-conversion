@@ -788,12 +788,23 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
 
   <div class="container is-widescreen">
     <h2 class="title is-3" id="section_speech_mushra">Speech MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+    <div class="content has-text-justified">
+    The samples in this section are drawn from the singing MUSHRA-like listening test. Several models are evaluated:
+    <b>PAD-Voc</b>: A voice conversion model based on <b>ForwardTacotron</b>, trained with a <b>reconstruction loss</b>.
 
-The samples in this section are from the speech MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures.
+    <b>MAC-Voc:</b> The <b>FlowMAC</b> model, trained with a <b>flow-matching</b> objective, and conditioned on the output of PAD-Voc.
+
+    <b>T5-Voc:</b> Our proposed <b>T5 attention-based diffusion model</b> adapted from instrumental music synthesis to human voice conversion.
+
+    <b>T5-All</b>: The same model as T5-Voc, but trained on a <b>broader dataset</b> that includes <b>instrumental music</b> and vocal-instrumental mixtures</b>, in addition to pure vocal data.
+    </div>
+    <br>
+
+<!-- The samples in this section are from the speech MUSHRA-like listening test. The <b>PAD-VC</b> model is based on ForwardTacotron with a reconstruction loss. <b>The MAC-Voc</b> model is the FlowMAC model which is trained with a flow-matching objective, conditioned on the output of PAD-VC. <b>T5-Voc</b> is the T5-based diffusion model adapted from instrumental music synthesis. <b>T5-All</b> is the same model, trained on a dataset also containing instrumental music and vocal-instrumental mixtures. -->
 
   <small><small>
 
-  <br><br>
+  <!-- <br><br> -->
 
 
   <!-- <b>Reference:</b>
