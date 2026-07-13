@@ -6,7 +6,7 @@
   <meta name="description" content=Adapting Diffusion-Based Music Synthesis to Speech and Singing Voice Conversion>
   <meta property="og:title" content=Adapting Diffusion-Based Music Synthesis to Speech and Singing Voice Conversion/>
   <meta property="og:description" content= Adapting Diffusion-Based Music Synthesis to Speech and Singing Voice Conversion/>
-  <meta property="og:url" content="https://benadar293.github.io/multi-aspect-conditioning"/>
+  <meta property="og:url" content="https://benadar293.github.io/voice-conversion"/>
 
   <meta property="og:image" content="static/images/overview.PNG" />
   <meta property="og:image:width" content="1200"/>
@@ -122,8 +122,7 @@
       <h2 class="title is-3">Abstract</h2>
       <div class="content has-text-justified">
   <p>
-    Recent generative models have shown promising results in audio generation across various domains, including human speech, singing voice, and multi-instrument music synthesis. Such acoustic models are typically specialized, with separate systems for speech, singing, and instrumental music.
-However, real-world audio often comprises multiple domains&mdash;for instance, musical recordings that combine a sung melody or spoken lyrics with instrumental accompaniment. This highlights the need for more general-purpose approaches to audio synthesis that can handle such integration. As an initial step towards universal synthesis, in this work we compare different acoustic models originating from distinct domains&mdash;instrumental music synthesis and speech synthesis&mdash;on the task of human voice conversion. Through an extensive evaluation across singing and speech, we demonstrate that a diffusion-based instrumental music synthesis model can be effectively adapted to human voice conversion, achieving performance comparable to or surpassing that of a dedicated speech synthesis model. To facilitate training on large-scale, minimally curated datasets, we demonstrate that off-the-shelf feature extractors for phonetics, pitch and acoustics provide effective conditioning signals for the synthesizer, enabling self-supervised training.
+    Recent diffusion-based generative models have achieved strong results in domain-specific audio generation tasks such as speech, singing, and instrumental music synthesis. However, these models are typically specialized and do not generalize well to mixed or intermediate audio types. In this work, we adapt a diffusion-based model originally designed for multi-instrument music synthesis to voice conversion, covering both speech and singing within a unified framework. Specifically, we extend musical note-based conditioning to include phonetic posteriorgrams (PPGs) and pitch contours, and reinterpret timbre conditioning as speaker or singer identity via feature-wise linear modulation. Experiments show that the adapted model matches or surpasses a dedicated voice conversion system in terms of naturalness and performer similarity, while maintaining accurate pitch control across speech and singing. At the same time, we observe limitations in phonetic fidelity and a degradation in vocal quality when incorporating instrumental training data. Furthermore, we demonstrate that off-the-shelf feature extractors provide effective conditioning signals, enabling large-scale self-supervised training without manual annotations. These results highlight the potential of cross-domain model transfer towards unified audio generation systems capable of handling speech, singing, and music.
   </p>
       </div>
     </div>
@@ -135,7 +134,6 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
 
       <ul style="list-style-type:disc;padding-left:40px">
       <li><a href="#section_singing_singstyle111">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset</a></li>
-      <li><a href="#section_singing_pop_winter">Singing Voice Conversion Samples&mdash;Popular Music & Schubert Winterreise</a></li>
       <li><a href="#section_speech">Speech Voice Conversion Samples</a></li>
       <li><a href="#section_speech_mushra">Speech MUSHRA-like Listening Test</a></li>
       <li><a href="#section_singing_mushra">Singing MUSHRA-like Listening Test</a></li>
@@ -152,21 +150,21 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
 
   <section class="section">
   <div class="container is-widescreen">
-    <b>For better visibilty, please use a Google Chrome or Microsoft Edge browser.</b>
+    <b>For better visibilty, please use a desktop Google Chrome, Microsoft Edge, or Mozilla Firefox browser.</b>
     <br><br><br>
     <h2 class="title is-3" id="section_singing_singstyle111">Singing Voice Conversion Samples&mdash;Singstyle111 Dataset<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     <p align="justify">
-    The samples in this section are generated using our proposed <b>attention-based T5-Voc model</b>, trained on both <b>speech and singing data</b>.
+    The samples in this section are generated using our proposed attention-based T5-Voc model, trained on both speech and singing data.
     The first column <b>("Source")</b> presents real vocal excerpts that are converted across different singers.
-    Each subsequent column corresponds to a <b>target singer</b>, and the first row <b>("Target")</b> provides a real reference excerpt for each.
+    Each subsequent column corresponds to a target singer, and the first row <b>("Target")</b> provides a real reference excerpt for each.
     <br>
-    Originally developed for <b>instrumental music synthesis</b>, this <b>T5-based diffusion model</b> has been effectively adapted for <b>singing voice conversion</b>.
-    The <b>version conditioning mechanism</b>&mdash;implemented using <b>FiLM layers</b> and initially designed for acoustic conditioning in instrumental music synthesis&mdash;can be repurposed to <b>condition on singer identity</b>.
+    Originally developed for instrumental music synthesis, this T5-based diffusion model has been effectively adapted for singing voice conversion.
+    The version conditioning mechanism&mdash;implemented using FiLM layers and initially designed for acoustic conditioning in instrumental music synthesis&mdash;can be repurposed to condition on singer identity.
     <br>
-    Additionally, we use an off-the-shelf <b>phonetic posteriorgram (PPG)</b> extractor, trained only on speech, to condition the model on phonetic content.
-    <b>Despite being trained exclusively on speech, the PPG extractor successfully captures the phonetic content of singing</b>, which is preserved during singer conversion.
+    Additionally, we use an off-the-shelf phonetic posteriorgram (PPG) extractor, trained only on speech, to condition the model on phonetic content.
+    Despite being trained exclusively on speech, the PPG extractor successfully captures the phonetic content of singing, which is preserved during singer conversion.
     <br>
-    For a comparison with the FlowMAC model (based on MatchaTTS and ForwardTacotron), refer to the <a href="#section_singing_mushra">singing MUSHRA-like listening test</a> section.
+    For a comparison with the <b>FlowMAC</b> model (based on <b>MatchaTTS</b> and <b>ForwardTacotron</b>), refer to the <a href="#section_singing_mushra">singing MUSHRA-like listening test</a> section.
   </p>
 
 
@@ -340,230 +338,17 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
 
   <section class="section">
   <div class="container is-widescreen">
-    <h2 class="title is-3" id="section_singing_pop_winter">Singing Voice Conversion Samples&mdash;Popular Music & Schubert Winterreise<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    <p align="justify">
-
-    The samples in this section are generated using the <b>attention-based T5-Voc model</b>, trained on vocal data and <b>conditioned on well-known singers</b> from popular music
-    as well as the <b>Schubert Winterreise dataset</b>. Vocal tracks were obtained through <b>source separation software</b> (see the <a href="#feature_extractors">repositories section</a> for details).
-<br>
-    Following the format of the previous section, <b>each column corresponds to a different singer. The first row ("Target")</b> provides a real reference excerpt for each singer,
-      while the <b>subsequent rows ("Generated")</b> contain singing excerpts that have been <b>converted across the different singers</b>, demonstrating the model’s ability to preserve phonetic and musical content while adapting timbre and style.
-    </p>
-
-    <div class="columns is-centered">
-
-      <div class="column">
-          <small><small>
-            <div style="height: 128px;">&nbsp;</div>
-          <b>Source 1 (The Beatles, With a Little Help):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/pop_s5.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Source 2 (Creedence, Lookin' Out):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/pop_s1.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Source 3 (<span style="color:MediumVioletRed">Madonna</span>, Like a Virgin):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/pop_s4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Source 4 (<span style="color:DarkCyan">Matti Caspi</span>, Hine Hine):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/pop_s3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Source 5 (Yehudit Ravitz, Derech Hameshi):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/sources/pop_s2.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-      </div>
-
-      <div class="column">
-          <small><small>
-            <br><b>Target (<span style="color:MediumSeaGreen">The Doors</span>):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/reference/doors_ref.mp3", type="audio/mp3">
-          </audio><br><br>
-          <b>Generated (S1, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s5_t1.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s1_t1.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s4_t1.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s3_t1.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5, <span style="color:MediumSeaGreen">The Doors</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s2_t1.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-      </div>
-
-
-
-      <div class="column">
-          <small><small>
-            <br><b>Target (<span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span>):</b><br>
-            <audio controls style="width: 240px; height: 50px">
-              <source src="static/samples/reference/fischer_dieskau_ref.mp3", type="audio/mp3">
-            </audio><br><br>
-            <b>Generated (S1, <span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span>):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s5_t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2, <span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s1_t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3, <span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s4_t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4, <span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s3_t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5, <span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s2_t2.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-
-      </div>
-
-      <div class="column">
-          <small><small>
-            <br><b>Target (<span style="color:MediumVioletRed">Madonna</span>):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/reference/madonna_ref.mp3", type="audio/mp3">
-          </audio><br><br>
-          <b>Generated (S1, <span style="color:MediumVioletRed">Madonna</span>):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s5_t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2, <span style="color:MediumVioletRed">Madonna</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s1_t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3, <span style="color:MediumVioletRed">Madonna</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s4_t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4, <span style="color:MediumVioletRed">Madonna</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s3_t3.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5, <span style="color:MediumVioletRed">Madonna</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s2_t3.mp3", type="audio/mp3">
-          </audio><br>
-
-
-          </small></small>
-
-      </div>
-
-
-      <div class="column">
-          <!-- <h2 class="title is-7">Brahms Piano Concerto 1, Style: Mitsuko Uchida Playing Beethoven Piano Concertos</h2> -->
-          <small><small>
-            <br><b>Target (<span style="color:DarkCyan">Matti Caspi</span>):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/reference/matti_caspi_ref.mp3", type="audio/mp3">
-          </audio><br><br>
-          <b>Generated (S1, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s5_t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S2, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s1_t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S3, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s4_t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S4, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s3_t4.mp3", type="audio/mp3">
-          </audio><br>
-
-          <b>Generated (S5, <span style="color:DarkCyan">Matti Caspi</span>):</b><br>
-
-          <audio controls style="width: 240px; height: 50px">
-            <source src="static/samples/singing/pop_s2_t4.mp3", type="audio/mp3">
-          </audio><br><br>
-
-          </small></small>
-      </div>
-
-
-    </div>
-
-  </div>
-
-  <section class="section">
-  <div class="container is-widescreen">
 
   <h2 class="title is-3" id="section_speech">Speech Voice Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
   <p align="justify">
-  This section presents <b>speech voice conversion</b> samples generated by our proposed <b>attention-based T5-Voc model</b>, trained on both <b>speech and singing</b> data.
-  The <b>first column ("Source")</b> contains real speech excerpts, which are <b>converted across target speakers</b> shown in the subsequent columns.
-  The <b>first row ("Target")</b> provides a real reference excerpt for each target speaker.
+  This section presents speech voice conversion samples generated by our proposed attention-based T5-Voc model, trained on both speech and singing data.
+  The first column <b>("Source")</b> contains real speech excerpts, which are converted across target speakers shown in the subsequent columns.
+  The first row <b>("Target")</b> provides a real reference excerpt for each target speaker.
   <br>
-  As in the previous sections, the model leverages the <b>FiLM-based version conditioning mechanism</b>, originally designed for acoustic conditioning in instrumental music synthesis,
-  to effectively <b>condition on speaker identity</b> in the speech domain.
+  As in the previous sections, the model leverages the FiLM-based version conditioning mechanism, originally designed for acoustic conditioning in instrumental music synthesis,
+  to effectively condition on speaker identity in the speech domain.
   <br>
-  For a comparative evaluation with the <b>FlowMAC model</b> (based on <b>MatchaTTS</b> and <b>ForwardTacotron</b>),
+  For a comparative evaluation with the <b>FlowMAC</b> model (based on <b>MatchaTTS</b> and <b>ForwardTacotron</b>),
   please refer to the <a href="#section_speech_mushra">speech MUSHRA-like listening test</a> section.
 </p>
   <!-- In this section we provide speech voice conversion samples from our proposed attention-based T5-Voc model trained on vocal data (speech and singing).
@@ -792,13 +577,13 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
     <h2 class="title is-3" id="section_speech_mushra">Speech MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     <p align="justify">
     The samples in this section are from the speech MUSHRA-like listening test. Several models are evaluated:
-    <b>PAD-Voc</b>: A voice conversion model based on <b>ForwardTacotron</b>, trained with a <b>reconstruction loss</b>.
+    <b>PAD-Voc</b>: A voice conversion model based on <b>ForwardTacotron</b>, trained with a reconstruction loss.
 
-    <b>MAC-Voc:</b> The <b>FlowMAC</b> model, trained with a <b>flow-matching</b> objective, and conditioned on the output of PAD-Voc.
+    <b>MAC-Voc:</b> The <b>FlowMAC</b> model, trained with a flow-matching objective, and conditioned on the output of PAD-Voc.
 
-    <b>T5-Voc:</b> Our proposed <b>T5 attention-based diffusion model</b> adapted from instrumental music synthesis to human voice conversion.
+    <b>T5-Voc:</b> Our proposed T5 attention-based diffusion model adapted from instrumental music synthesis to human voice conversion.
 
-    <b>T5-All</b>: The same model as T5-Voc, but trained on a <b>broader dataset</b> that includes <b>instrumental music</b> and vocal-instrumental mixtures</b>, in addition to pure vocal data.
+    <b>T5-All</b>: The same model as T5-Voc, but trained on a broader dataset including instrumental music and vocal-instrumental mixtures, in addition to pure vocal data.
   </p>
     <br>
 
@@ -977,13 +762,13 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
     <h2 class="title is-3" id="section_singing_mushra">Singing MUSHRA-like Listening Test<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
     <p align="justify">
     The samples in this section are from the singing MUSHRA-like listening test. Several models are evaluated:
-    <b>PAD-Voc</b>: A voice conversion model based on <b>ForwardTacotron</b>, trained with a <b>reconstruction loss</b>.
+    <b>PAD-Voc</b>: A voice conversion model based on <b>ForwardTacotron</b>, trained with a reconstruction loss.
 
-    <b>MAC-Voc:</b> The <b>FlowMAC</b> model, trained with a <b>flow-matching</b> objective, and conditioned on the output of PAD-Voc.
+    <b>MAC-Voc:</b> The <b>FlowMAC</b> model, trained with a flow-matching objective, and conditioned on the output of PAD-Voc.
 
-    <b>T5-Voc:</b> Our proposed <b>T5 attention-based diffusion model</b> adapted from instrumental music synthesis to human voice conversion.
+    <b>T5-Voc:</b> Our proposed T5 attention-based diffusion model adapted from instrumental music synthesis to human voice conversion.
 
-    <b>T5-All</b>: The same model as T5-Voc, but trained on a <b>broader dataset</b> that includes <b>instrumental music</b> and vocal-instrumental mixtures</b>, in addition to pure vocal data.
+    <b>T5-All</b>: The same model as T5-Voc, but trained on a broader dataset that includes instrumental music and vocal-instrumental mixtures, in addition to pure vocal data.
   </p>
     <br>
 
@@ -1334,122 +1119,118 @@ However, real-world audio often comprises multiple domains&mdash;for instance, m
   <br>
 
   <section class="section">
-  <div class="container is-widescreen">
-    <h2 class="title is-3" id="section_mix">Vocal&ndash;Instrumental Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
-    <p align="justify">
-    The samples in this section are generated using the <b>attention-based T5-All model</b>, trained on a combined dataset of <b>vocal and instrumental music</b>.
-    The <b>instrumental</b> content was derived from <b>automatically transcribed piano rolls</b>.
-    <br>
-    For <b>vocal-only samples</b> generated by this model, refer to the <b>MUSHRA-like listening test sections</b> for <a href="#section_speech_mushra">speech</a> and <a href="#section_singing_mushra">singing</a>.
-    <br>
-    While this paper focuses on the evaluation of <b>vocal synthesis</b>, we plan to explore the generation of <b>vocal-instrumental mixtures</b> more extensively in future work.
-    </p>
-    <!-- The samples in this section are from the attention-based T5-All model trained on vocal and instrumental data. The instrumental music content was obtained through an automatically-transcribed piano roll.
-    For vocal-only samples generated by this model, see sections on MUSHRA-like listening tests for <a href="#section_speech_mushra">speech</a> and <a href="#section_singing_mushra">singing</a>.
-    Although in the paper we only evaluate vocal synthesis, we plan to further investigate generation of vocal-instrumental mixtures in future work. -->
-    <br>
-    <div class="columns is-centered">
+    <div class="container is-widescreen">
+      <h2 class="title is-3" id="section_mix">Vocal&ndash;Instrumental Conversion Samples<a href="#contents"><small><small><small><small>&nbsp;&nbsp;&nbsp;&nbsp;[Go to top]</small></small></small></small></a></h2>
+      <p align="justify">
+      The samples in this section are generated using the attention-based <b>T5-All</b> model, trained on a combined dataset of vocal and instrumental music.
+      The instrumental content was derived from automatically transcribed piano rolls.
+      <br>
+      For vocal-only samples generated by this model, refer to the MUSHRA-like listening test sections for <a href="#section_speech_mushra">speech</a> and <a href="#section_singing_mushra">singing</a>.
+      <br>
+      While this paper focuses on the evaluation of vocal synthesis, we plan to explore the generation of vocal-instrumental mixtures more extensively in future work.
+      </p>
+
+      <br>
+      <div class="columns is-centered">
 
 
 
 
 
-      <div class="column is-one-quarter">
-          <small><small>
-          Source: <b>Riders on The Storm (The Doors)</b><br>Target: <b><span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span></b>
-          <audio controls>
-            <source src="static/samples/mix/mix_s7_t3.mp3", type="audio/mp3">
-          </audio><br>
-          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b><span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span></b>
-          <audio controls>
-            <source src="static/samples/mix/mix_s5_t3.mp3", type="audio/mp3">
-          </audio><br>
+        <div class="column is-one-quarter">
+            <small><small>
+            Source 1, <b><span style="color:MidnightBlue">Target 1</span>:</b>
+            <audio controls>
+              <source src="static/samples/mix/mix_s7_t3.mp3", type="audio/mp3">
+            </audio><br>
 
-          Source: <b>Like a Virgin (Madonna)</b><br>Target: <b><span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span></b>
-          <audio controls>
-            <source src="static/samples/mix/mix_s4_t3.mp3", type="audio/mp3">
-          </audio><br>
-
-Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b><span style="color:MidnightBlue">Dietrich Fischer-Dieskau</span></b>
-          <audio controls>
-            <source src="static/samples/mix/mix_s3_t3.mp3", type="audio/mp3">
-          </audio><br><br>
+  Source 2, <b><span style="color:MidnightBlue">Target 1</span>:</b>
+            <audio controls>
+              <source src="static/samples/mix/mix_s3_t3.mp3", type="audio/mp3">
+            </audio><br><br>
 
 
 
 
 
-          </small></small>
-      </div>
+            </small></small>
+        </div>
 
 
 
 
-      <div class="column is-one-quarter">
-          <small><small>
-          Source: <b>Riders on The Storm (The Doors)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b>
-<br>
-          <audio controls>
-            <source src="static/samples/mix/mix_s7_t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b>
-          <br>
-          <audio controls>
-            <source src="static/samples/mix/mix_s5_t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          Source: <b>Like a Virgin (Madonna)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b>
-          <br>
-          <audio controls>
-            <source src="static/samples/mix/mix_s4_t2.mp3", type="audio/mp3">
-          </audio><br>
-
-          Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b><span style="color:MediumSeaGreen">The Doors</span></b><br>
-
-          <audio controls>
-            <source src="static/samples/mix/mix_s3_t2.mp3", type="audio/mp3">
-          </audio><br><br>
-
-
-          </small></small>
-      </div>
-
-
-      <div class="column is-one-quarter">
-          <small><small>
-            Source: <b>Riders on The Storm (The Doors)</b><br>Target: <b>Creedence Clearwater Revival</b>
+        <div class="column is-one-quarter">
+            <small><small>
+            Source 1, <b><span style="color:MediumSeaGreen">Target 2</span>:</b>
             <br>
-
-
-          <audio controls>
-            <source src="static/samples/mix/mix_s7_t6.mp3", type="audio/mp3">
-          </audio><br>
-
-          Source: <b>Martha My Dear (The Beatles)</b><br>Target: <b><span style="color:FireBrick">Jimi Hendrix</span></b>
-          <br>
-
-          <audio controls>
-            <source src="static/samples/mix/mix_s5_t1.mp3", type="audio/mp3">
-          </audio><br>
-
-          Source: <b>Holiday (Madonna)</b><br>Target: <b>Metallica</b>
-          <br>
-
-          <audio controls>
-            <source src="static/samples/mix/mix_s6_t5.mp3", type="audio/mp3">
-          </audio><br>
-
-          Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b><span style="color:FireBrick">Jimi Hendrix</span></b><br>
+            <audio controls>
+              <source src="static/samples/mix/mix_s7_t2.mp3", type="audio/mp3">
+            </audio><br>
 
 
 
-          <audio controls>
-            <source src="static/samples/mix/mix_s3_t1.mp3", type="audio/mp3">
-          </audio><br><br>
+            Source 2, <b><span style="color:MediumSeaGreen">Target 2</span>:</b><br>
+
+            <audio controls>
+              <source src="static/samples/mix/mix_s3_t2.mp3", type="audio/mp3">
+            </audio><br><br>
 
 
-          </small></small>
+            </small></small>
+        </div>
+
+
+        <div class="column is-one-quarter">
+            <small><small>
+            Source 1, <b><span style="color:FireBrick">Target 3</span>:</b>
+            <br>
+            <audio controls>
+              <source src="static/samples/mix/mix_s7_t1.mp3", type="audio/mp3">
+            </audio><br>
+
+
+
+
+
+            Source 2, <b><span style="color:FireBrick">Target 3</span>:</b><br>
+
+
+
+            <audio controls>
+              <source src="static/samples/mix/mix_s3_t1.mp3", type="audio/mp3">
+            </audio><br><br>
+
+
+            </small></small>
+        </div>
+
+
+        <div class="column is-one-quarter">
+            <small><small>
+              Source 1, <b><span style="color:MediumVioletRed">Target 4</span>:</b><br>
+
+            <audio controls>
+              <source src="static/samples/mix/mix_s7_t6.mp3", type="audio/mp3">
+            </audio><br>
+
+
+            Source 2, <b><span style="color:HotPink">Target 5</span>:</b><br>
+
+            <audio controls>
+              <source src="static/samples/mix/mix_s3_t5.mp3", type="audio/mp3">
+            </audio><br><br>
+
+
+
+            </small></small>
+        </div>
+
+
+
+
+
+
+
       </div>
 
 
@@ -1459,14 +1240,6 @@ Source: <b>Hine Hine (Matti Caspi)</b><br>Target: <b><span style="color:Midnight
 
 
     </div>
-
-
-
-
-
-
-
-  </div>
 
   <br><br><br>
 
